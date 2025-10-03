@@ -2,15 +2,15 @@
   "portfolioProjects": [
     {
       "id": 1,
-      "title": "ETL 파이프라인 구축",
-      "description": "대용량 데이터 처리와 분석을 위한 ETL 파이프라인을 설계하고 구축한 프로젝트입니다.",
-      "detailDescription": "데이터 수집부터 분석까지의 전체 파이프라인을 구축하여 데이터 처리 효율성을 크게 향상시켰습니다. 다양한 데이터 소스에서 실시간으로 데이터를 수집하고, 정제하여 분석 가능한 형태로 변환하는 시스템을 개발했습니다.",
-      "features": ["실시간 데이터 수집", "데이터 정제 및 변환", "분산 처리 시스템", "모니터링 대시보드"],
+      "title": "KiyoungFnB 통합 데이터 플랫폼",
+      "description": "KiyoungFnB 기업의 종합적인 데이터 생태계 통합 플랫폼을 구축한 프로젝트입니다.",
+      "detailDescription": "GCP 클라우드 인프라를 기반으로 Jenkins CI/CD, Apache Airflow, BigQuery 등을 활용하여 하이브리드 클라우드 아키텍처를 구축했습니다. Coupang, Baemin, NaverMap 등 다양한 모바일 앱과 연동하여 다중 데이터 소스와 실시간 분석 시스템을 완성했습니다.",
+      "features": ["하이브리드 인프라 통합", "모바일 앱 연동", "Jenkins CI/CD 자동화", "빅데이터 처리"],
       "thumbnail": "templates/history/20250919_KY_ETL_flow.png",
       "author": "한기정",
-      "category": "Data Engineering",
+      "category": "Data Engineering & Cloud Infrastructure",
       "rarity": "legendary",
-      "techStack": ["Python", "Apache Airflow", "MySQL", "Redis"],
+      "techStack": ["Google Cloud Platform", "Jenkins", "Apache Airflow", "BigQuery", "Django"],
       "period": "2024.12"
     },
     {
