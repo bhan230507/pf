@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 검색 트렌드 분석 - 한기정 포트폴리오</title>
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">
+            ← 메인으로 돌아가기
+        </a>
+
+        <div class="project-header">
+            <h1 class="project-title">네이버 검색 트렌드 분석</h1>
+            <div class="project-category">Data Analysis</div>
+            <p class="project-description">
+                네이버 검색 데이터를 분석하여 트렌드와 인사이트를 도출하는 시스템입니다. 
+                네이버 검색 API를 활용하여 실시간 검색 트렌드를 분석하고, 마케팅 전략 수립에 활용할 수 있는 인사이트를 제공합니다.
+            </p>
+            <div class="project-meta">
+
+                <div class="meta-item">
+                    <div class="icon">🔍</div>
+                    <span>트렌드 분석</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">📱</div>
+                    <span>API 연동</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-image">
+                <img src="history/datacenter_네이버검색트랜드.png" alt="네이버 검색 트렌드 분석" class="clickable-image" onclick="openImageModal('history/datacenter_네이버검색트랜드.png', '네이버 검색 트렌드 분석')">
+            </div>
+
+            <div class="project-details">
+                <div class="section">
+                    <h2 class="section-title">프로젝트 개요</h2>
+                    <p>
+                        네이버 검색 API를 활용하여 실시간 검색 트렌드를 분석하고, 마케팅 전략 수립에 활용할 수 있는 인사이트를 제공하는 시스템을 개발했습니다. 
+                        시계열 분석과 키워드 추출을 통해 트렌드 예측 모델을 구축했습니다.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Naver API</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">주요 기능</h2>
+                    <ul class="features-list">
+                        <li>실시간 검색 트렌드 분석</li>
+                        <li>키워드 추출 및 분석</li>
+                        <li>시계열 데이터 분석</li>
+                        <li>자동 리포트 생성</li>
+                        <li>트렌드 예측 모델</li>
+                        <li>데이터 시각화</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">성과 및 결과</h2>
+                    <ul class="features-list">
+                        <li>트렌드 예측 정확도 85% 달성</li>
+                        <li>마케팅 효과 30% 향상</li>
+                        <li>데이터 분석 시간 70% 단축</li>
+                        <li>인사이트 도출 효율성 증대</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <button class="close-button" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.classList.add('active');
+            
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
+        }
+
+        // 이미지 모달 닫기
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html> 

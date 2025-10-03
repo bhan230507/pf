@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL 파이프라인 구축 - 한기정 포트폴리오</title>
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">
+            ← 메인으로 돌아가기
+        </a>
+
+        <div class="project-header">
+            <h1 class="project-title">ETL 파이프라인 구축</h1>
+            <div class="project-category">Data Engineering</div>
+            <p class="project-description">
+                대용량 데이터 처리와 분석을 위한 ETL 파이프라인을 설계하고 구축한 프로젝트입니다. 
+                데이터 수집부터 분석까지의 전체 파이프라인을 구축하여 데이터 처리 효율성을 크게 향상시켰습니다.
+            </p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <div class="icon">⚡</div>
+                    <span>실시간 처리</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">🔧</div>
+                    <span>분산 시스템</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-image">
+                <img src="history/202412_ETL_Diagram.png" alt="ETL 파이프라인 다이어그램" class="clickable-image" onclick="openImageModal('history/202412_ETL_Diagram.png', 'ETL 파이프라인 다이어그램')">
+            </div>
+
+            <div class="project-details">
+                <div class="section">
+                    <h2 class="section-title">프로젝트 개요</h2>
+                    <p>
+                        다양한 데이터 소스에서 실시간으로 데이터를 수집하고, 정제하여 분석 가능한 형태로 변환하는 시스템을 개발했습니다. 
+                        Apache Airflow를 활용한 워크플로우 자동화와 모니터링 시스템을 구축하여 데이터 파이프라인의 안정성과 효율성을 확보했습니다.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Apache Airflow</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">주요 기능</h2>
+                    <ul class="features-list">
+                        <li>실시간 데이터 수집 및 스트리밍 처리</li>
+                        <li>데이터 정제 및 변환 자동화</li>
+                        <li>분산 처리 시스템 구축</li>
+                        <li>실시간 모니터링 대시보드</li>
+                        <li>장애 복구 및 백업 시스템</li>
+                        <li>데이터 품질 검증</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">성과 및 결과</h2>
+                    <ul class="features-list">
+                        <li>데이터 처리 속도 300% 향상</li>
+                        <li>시스템 가동률 99.9% 달성</li>
+                        <li>데이터 파이프라인 오류율 80% 감소</li>
+                        <li>운영 비용 40% 절감</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <button class="close-button" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.classList.add('active');
+            
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
+        }
+
+        // 이미지 모달 닫기
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html> 
