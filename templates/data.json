@@ -10,7 +10,7 @@
       "author": "한기정",
       "category": "Data Engineering & Cloud Infrastructure",
       "rarity": "legendary",
-      "techStack": ["Google Cloud Platform", "Jenkins", "Apache Airflow", "BigQuery", "Django"],
+      "techStack": ["Google Cloud Platform", "Compute Engine (34.4)", "BigQuery", "Google Cloud Storage", "Jenkins", "Nginx", "Gunicorn", "Django", "Apache Airflow", "MySQL", "PostgreSQL", "Coupang API", "Baemin API", "NaverMap API", "Looker", "Google Sheets"],
       "period": "2024.12"
     },
     {
