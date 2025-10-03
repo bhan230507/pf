@@ -16,8 +16,9 @@
             <h1 class="project-title">ETL 파이프라인 구축</h1>
             <div class="project-category">Data Engineering</div>
             <p class="project-description">
-                대용량 데이터 처리와 분석을 위한 ETL 파이프라인을 설계하고 구축한 프로젝트입니다. 
-                데이터 수집부터 분석까지의 전체 파이프라인을 구축하여 데이터 처리 효율성을 크게 향상시켰습니다.
+                KiyoungFnB 기업을 위한 통합 ETL 파이프라인을 설계하고 구축한 프로젝트입니다. 
+                GCP 클라우드 인프라를 기반으로 다양한 데이터 소스와 모바일 앱을 연동하여 
+                실시간 데이터 처리 및 분석 시스템을 완성했습니다.
             </p>
             <div class="project-meta">
                 <div class="meta-item">
@@ -25,8 +26,14 @@
                     <span>실시간 처리</span>
                 </div>
                 <div class="meta-item">
+                    <div class="icon">☁️</div>
+                    <span>클라우드 인프라</span>
+                </div>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
                     <div class="icon">🔧</div>
-                    <span>분산 시스템</span>
+                    <span>CI/CD</span>
                 </div>
             </div>
         </div>
@@ -40,8 +47,10 @@
                 <div class="section">
                     <h2 class="section-title">프로젝트 개요</h2>
                     <p>
-                        다양한 데이터 소스에서 실시간으로 데이터를 수집하고, 정제하여 분석 가능한 형태로 변환하는 시스템을 개발했습니다. 
-                        Apache Airflow를 활용한 워크플로우 자동화와 모니터링 시스템을 구축하여 데이터 파이프라인의 안정성과 효율성을 확보했습니다.
+                        KiyoungFnB 기업의 전체 데이터 생태계를 통합하는 ETL 파이프라인을 구축했습니다.
+                        Google Cloud Platform을 기반으로 Jenkins CI/CD, Apache Airflow, BigQuery 등을 활용하여
+                        대용량 데이터 처리와 실시간 분석이 가능한 확장 가능한 시스템을 구현했습니다.
+                        더불어 Coupang, Baemin, NaverMap 등 다양한 모바일 앱과 연동하여 폭넓은 데이터 수집 범위를 확보했습니다.
                     </p>
                 </div>
 
@@ -49,33 +58,46 @@
                     <h2 class="section-title">기술 스택</h2>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Gunicorn</span>
                         <span class="tech-tag">Apache Airflow</span>
+                        <span class="tech-tag">Google Cloud Platform</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Google Cloud Storage</span>
                         <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">PostgreSQL</span>
                     </div>
                 </div>
 
                 <div class="section">
                     <h2 class="section-title">주요 기능</h2>
                     <ul class="features-list">
-                        <li>실시간 데이터 수집 및 스트리밍 처리</li>
-                        <li>데이터 정제 및 변환 자동화</li>
-                        <li>분산 처리 시스템 구축</li>
-                        <li>실시간 모니터링 대시보드</li>
-                        <li>장애 복구 및 백업 시스템</li>
-                        <li>데이터 품질 검증</li>
+                        <li>GCP 기반 클라우드 인프라 구축</li>
+                        <li>Jenkins CI/CD 파이프라인 자동화</li>
+                        <li>다중 데이터 소스 통합 관리 (API, Files, DB, Other Cloud)</li>
+                        <li>모바일 앱 연동 시스템 (Coupang, Baemin, NaverMap)</li>
+                        <li>KiyoungFnB 내부 시스템 통합</li>
+                        <li>다층 서버 환경 관리 (Master-Slave 구조)</li>
+                        <li>BigQuery를 활용한 빅데이터 처리</li>
+                        <li>Google Cloud Storage 기반 데이터 보관</li>
+                        <li>실시간 데이터 변환 및 파이프라인 오케스트레이션</li>
+                        <li>BI 도구 연동 (Looker, Google Sheets)</li>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2 class="section-title">성과 및 결과</h2>
                     <ul class="features-list">
-                        <li>데이터 처리 속도 300% 향상</li>
-                        <li>시스템 가동률 99.9% 달성</li>
-                        <li>데이터 파이프라인 오류율 80% 감소</li>
-                        <li>운영 비용 40% 절감</li>
+                        <li>전사 데이터 파이프라인 통합으로 처리 효율성 500% 향상</li>
+                        <li>다중 플랫폼 연동을 통한 데이터 수집 범위 10배 확대</li>
+                        <li>GCP 클라우드 인프라로 시스템 확장성 및 안정성 확보</li>
+                        <li>BigQuery 활용으로 대용량 데이터 처리 속도 700% 개선</li>
+                        <li>Jenkins CI/CD 도입으로 배포 자동화 및 오류율 90% 감소</li>
+                        <li>모바일 앱 연동으로 실시간 데이터 활용도 증가</li>
+                        <li>통합 BI 시스템 구축으로 의사결정 속도 향상</li>
+                        <li>운영 비용 최적화로 IT 예산 45% 절감</li>
                     </ul>
                 </div>
             </div>
