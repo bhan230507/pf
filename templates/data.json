@@ -80,13 +80,13 @@
     },
     {
       "id": 7,
-      "title": "상권 분석 맵 시스템",
-      "description": "지리적 데이터를 활용하여 상권을 분석하고 시각화하는 지도 기반 시스템입니다.",
+      "title": "KiyoungFnB GIS 상권분석시스템",
+      "description": "스타트업 창업 지원을 위한 종합 GIS 기반 상권분석 플랫폼입니다.",
       "detailDescription": "다양한 지리적 데이터와 상권 정보를 결합하여 지역별 상권 분석을 제공하는 시스템을 개발했습니다. 인터랙티브한 지도와 데이터 시각화를 통해 직관적인 분석 결과를 제공합니다.",
       "features": ["지리적 데이터 분석", "인터랙티브 지도", "상권 시각화", "데이터 통합"],
       "thumbnail": "templates/history/상권분석_맵.png",
       "author": "한기정",
-      "category": "Geospatial Analytics",
+      "category": "Geospatial Analytics & Commercial Intelligence",
       "rarity": "epic",
       "techStack": ["Python", "Folium", "Matplotlib"],
       "period": "2024"
