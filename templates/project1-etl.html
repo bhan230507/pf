@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL 파이프라인 구축 - 한기정 포트폴리오</title>
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">
+            ← 메인으로 돌아가기
+        </a>
+
+        <div class="project-header">
+            <h1 class="project-title">KiyoungFnB 통합 데이터 플랫폼</h1>
+            <div class="project-category">Data Engineering & Cloud Infrastructure</div>
+            <p class="project-description">
+                KiyoungFnB 기업의 종합적인 데이터 생태계 통합 플랫폼을 구축한 프로젝트입니다. 
+                GCP, Jenkins, Airflow를 활용한 하이브리드 클라우드 아키텍처로 
+                다중 데이터 소스와 실시간 분석 시스템을 완성했습니다.
+            </p>
+            <div class="project-meta">
+
+                <div class="meta-item">
+                    <div class="icon">⚡</div>
+                    <span>실시간 처리</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">☁️</div>
+                    <span>클라우드 인프라</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">🔧</div>
+                    <span>CI/CD</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-image">
+                <img src="history/20250919_KY_ETL_flow.png" alt="ETL 파이프라인 다이어그램" class="clickable-image" onclick="openImageModal('history/20250919_KY_ETL_flow.png', 'ETL 파이프라인 다이어그램')">
+            </div>
+
+            <div class="project-details">
+                <div class="section">
+                    <h2 class="section-title">프로젝트 개요</h2>
+                    <p>
+                        KiyoungFnB의 복잡한 하이브리드 인프라 환경을 통합하는 데이터 플랫폼을 구축했습니다.
+                        <strong>GCP 클라우드 영역</strong>에서는 Jenkins CI/CD(Compute Engine 34.4), Apache Airflow, BigQuery를 구축하고,
+                        <strong>KiyoungFnB 내부 시스템</strong>에서는 MySQL, PostgreSQL 데이터베이스와 내부 Airflow를 운영합니다.
+                        <strong>다층 서버 환경</strong>(Inbound Servers Master, MiniPC Slave, iwinv Servers Slave)과
+                        <strong>모바일 앱 연동</strong>(Coupang, Baemin, NaverMap)을 통해 
+                        완전한 온프레미스-클라우드 하이브리드 데이터 아키텍처를 실현했습니다.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Google Cloud Platform</span>
+                        <span class="tech-tag">Compute Engine (34.4)</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Google Cloud Storage</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Gunicorn</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Apache Airflow</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Coupang API</span>
+                        <span class="tech-tag">Baemin API</span>
+                        <span class="tech-tag">NaverMap API</span>
+                        <span class="tech-tag">Looker</span>
+                        <span class="tech-tag">Google Sheets</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">주요 기능</h2>
+                    <ul class="features-list">
+                        <li><strong>하이브리드 아키텍처</strong>: GCP 클라우드와 KiyoungFnB 온프레미스 환경 통합</li>
+                        <li><strong>데이터 추출(Extract)</strong>: API, Files, DB, Other Cloud에서 다중 소스 데이터 수집</li>
+                        <li><strong>데이터 변환(Transform)</strong>: Jenkins CI/CD와 Airflow를 통한 실시간 데이터 파이프라인</li>
+                        <li><strong>데이터 로드(Load)</strong>: BigQuery, MySQL, PostgreSQL 다층 스토리지</li>
+                        <li><strong>모바일 데이터 수집</strong>: Coupang, Baemin, NaverMap 실시간 연동</li>
+                        <li><strong>서버 오케스트레이션</strong>: Inbound Master → MiniPC/iwinv Slave 구조</li>
+                        <li><strong>Compute Engine 관리</strong>: Jenkins → Nginx → Gunicorn → Django 스택</li>
+                        <li><strong>BI 보고 시스템</strong>: BigQuery → Looker/Google Sheets/Web 분석</li>
+                        <li><strong>내부 데이터 통합</strong>: KiyoungFnB MySQL/PostgreSQL 관리</li>
+                        <li><strong>Git 기반 배포</strong>: 코드 버전 관리와 자동 배포 파이프라인</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">성과 및 결과</h2>
+                    <ul class="features-list">
+                        <li><strong>하이브리드 인프라 통합</strong>: 온프레미스-KiyoungFnB와 GCP 클라우드 완전 통합 달성</li>
+                        <li><strong>다중 데이터 소스 통합</strong>: API, Files, DB, Other Cloud의 실시간 동기화</li>
+                        <li><strong>모바일 앱 생태계 연동</strong>: Coupang, Baemin, NaverMap 완전 통합 데이터 수집</li>
+                        <li><strong>Compute Engine 최적화</strong>: Jenkins-Nginx-Gunicorn-Django 스택 성능 향상</li>
+                        <li><strong>서버 클러스터 관리</strong>: Master-Slave 구조로 가용성 및 확장성 확보</li>
+                        <li><strong>빅데이터 처리 혁신</strong>: BigQuery 기반 대용량 분석 및 실시간 뷰</li>
+                        <li><strong>내부 시스템 혁신</strong>: MySQL-PostgreSQL 이중화 및 Airflow 오케스트레이션</li>
+                        <li><strong>BI 대시보드 구현</strong>: Looker, Google Sheets, Web 기반 실시간 의사결정 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <button class="close-button" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.classList.add('active');
+            
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
+        }
+
+        // 이미지 모달 닫기
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html> 
