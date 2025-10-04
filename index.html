@@ -24,7 +24,7 @@
             <!-- 탭 네비게이션 -->
             <div class="tab-navigation">
                 <button class="tab-button active" onclick="showTab('portfolio')">PORTFOLIO</button>
-                <button class="tab-button" onclick="window.open('templates/cv.html', '_blank')">CV</button>
+                <button class="tab-button" onclick="showTab('cv')">CV</button>
             </div>
         </div>
 
@@ -143,6 +143,16 @@
             </div>
         </div>
         
+        <!-- CV 탭 컨텐츠 -->
+        <div id="cv-content" class="tab-content">
+            <div style="background: white; border: 3px solid red; padding: 20px; margin: 20px; border-radius: 10px;">
+                <h1 style="color: red; text-align: center;">CV 탭 테스트</h1>
+                <p>이것이 보이면 탭 전환은 정상 작동합니다.</p>
+                <div class="cv-container">
+                    <iframe src="templates/cv.html" width="100%" height="600px" frameborder="0" style="border-radius: 15px;"></iframe>
+                </div>
+            </div>
+        </div>
         
         <!-- 임시 CV 내용 주석처리 -->
         <!--
