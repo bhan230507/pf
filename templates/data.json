@@ -69,26 +69,13 @@
       "id": 8,
       "title": "키워드 모니터링 시스템",
       "description": "실시간으로 키워드를 모니터링하고 트렌드를 분석하는 시스템입니다.",
-      "detailDescription": "다양한 소스에서 키워드를 실시간으로 수집하고 분석하여 트렌드와 인사이트를 제공하는 모니터링 시스템을 개발했습니다. 알림 기능과 리포트 자동 생성을 통해 효율적인 키워드 관리가 가능합니다.",
+      "detailDescription": "다양한 소스에서 키워드를 실시간으로 수집하고 분석하여 트렌드와 인사이트를 제공하는 모니터링 시스템을 개발했습니다. 알림 시스템과 리포트 자동 생성을 통해 효율적인 키워드 관리가 가능합니다.",
       "features": ["실시간 키워드 모니터링", "트렌드 분석", "알림 시스템", "자동 리포트"],
       "thumbnail": "templates/history/키워드_모니터링.png",
       "author": "한기정",
       "category": "Social Media Analytics",
       "rarity": "rare",
       "techStack": ["Python", "Selenium", "BeautifulSoup", "Django", "Redis"],
-      "period": "2024"
-    },
-    {
-      "id": 2,
-      "title": "정산 시스템",
-      "description": "다양한 결제 수단과 정산 프로세스를 자동화하여 운영 효율성을 극대화한 시스템입니다.",
-      "detailDescription": "여러 결제 수단과 정산 프로세스를 통합하여 자동화된 정산 시스템을 개발했습니다. 정확성과 속도를 크게 향상시켰습니다.",
-      "features": ["다중 결제 수단", "자동 정산 처리", "실시간 정산 현황", "정산 리포트"],
-      "thumbnail": "templates/history/promotion_auto.png",
-      "author": "한기정",
-      "category": "Payment & Settlement",
-      "rarity": "epic",
-      "techStack": ["Python", "Payment API", "Database", "REST API"],
       "period": "2024"
     },
     {
@@ -115,6 +102,19 @@
       "category": "Data Analysis & Trend Intelligence",
       "rarity": "rare",
       "techStack": ["Python", "Pandas", "Matplotlib", "Naver API"],
+      "period": "2024"
+    },
+    {
+      "id": 2,
+      "title": "정산 시스템",
+      "description": "다양한 결제 수단과 정산 프로세스를 자동화하여 운영 효율성을 극대화한 시스템입니다.",
+      "detailDescription": "여러 결제 수단과 정산 프로세스를 통합하여 자동화된 정산 시스템을 개발했습니다. 정확성과 속도를 크게 향상시켰습니다.",
+      "features": ["다중 결제 수단", "자동 정산 처리", "실시간 정산 현황", "정산 리포트"],
+      "thumbnail": "templates/history/promotion_auto.png",
+      "author": "한기정",
+      "category": "Payment & Settlement",
+      "rarity": "epic",
+      "techStack": ["Python", "Payment API", "Database", "REST API"],
       "period": "2024"
     }
   ]
