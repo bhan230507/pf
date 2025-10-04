@@ -1189,11 +1189,26 @@ body {
 
 /* 탭 컨텐츠 스타일 */
 .tab-content {
-    display: none;
+    display: none !important;
 }
 
 .tab-content.active {
-    display: block;
+    display: block !important;
+}
+
+/* CV 탭 강제 표시 */
+#cv-content {
+    display: block !important;
+    position: fixed !important;
+    top: 50px !important;
+    left: 50px !important;
+    right: 50px !important;
+    bottom: 50px !important;
+    background: white !important;
+    border: 10px solid red !important;
+    border-radius: 20px !important;
+    z-index: 9999 !important;
+    overflow: auto !important;
 }
 
 /* CV 컨테이너 스타일 */
