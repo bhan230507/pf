@@ -84,8 +84,10 @@ function openProject(id) {
 
 // 카드 렌더링
 function renderCards() {
-    const cardsGrid = document.getElementById('cardsGrid');
-    cardsGrid.innerHTML = portfolioProjects.map(project => createCard(project)).join('');
+    const cardsGrid = document.getElementById('portfolio-cards');
+    if (cardsGrid) {
+        cardsGrid.innerHTML = portfolioProjects.map(project => createCard(project)).join('');
+    }
 }
 
 // 파티클 효과 생성
@@ -185,8 +187,21 @@ function showTab(tabName) {
 
 // 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', function() {
-    // 초기 탭 설정 (portfolio 탭 기본 활성화)
-    showTab('portfolio');
+    // URL 해시 확인하여 탭 설정
+    const hash = window.location.hash;
+    if (hash === '#portfolio-tab' || hash === '#portfolio-cards') {
+        showTab('portfolio');
+        // 포트폴리오 카드 위치로 스크롤
+        setTimeout(() => {
+            const portfolioCards = document.getElementById('portfolio-cards');
+            if (portfolioCards) {
+                portfolioCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    } else {
+        // 기본 탭 설정
+        showTab('portfolio');
+    }
     
     createParticles();
     setupCardHoverEffects();
@@ -211,6 +226,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('image-modal')) {
             closeImageModal();
+        }
+    });
+
+    // 해시 변경 이벤트 감지
+    window.addEventListener('hashchange', function() {
+        const newHash = window.location.hash;
+        if (newHash === '#portfolio-tab' || newHash === '#portfolio-cards') {
+            showTab('portfolio');
+            setTimeout(() => {
+                const portfolioCards = document.getElementById('portfolio-cards');
+                if (portfolioCards) {
+                    portfolioCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
         }
     });
 }); 

@@ -446,6 +446,35 @@ body {
     margin-bottom: 0;
 }
 
+.computer-skills, .language-skills {
+    margin-top: 10px;
+}
+
+.skill-row {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.awards {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.awards li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.awards li:before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .tab-navigation {
