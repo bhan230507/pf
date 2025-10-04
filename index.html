@@ -240,7 +240,7 @@
         </div>
         
         <!-- CV 탭 컨텐츠 -->
-        <div id="cv-content" class="tab-content cv-content" style="display: block;">
+        <div id="cv-content" class="tab-content cv-content" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
             <div style="padding: 20px;">
 
 <div style="background: white; padding: 20px;">
@@ -606,22 +606,48 @@
 
     <script>
         function showTab(tabName) {
+            console.log('Switching to tab:', tabName);
+            
             // 모든 탭 컨텐츠 숨기기
-            document.getElementById('portfolio-content').style.display = 'none';
-            document.getElementById('cv-content').style.display = 'none';
+            const portfolioContent = document.getElementById('portfolio-content');
+            const cvContent = document.getElementById('cv-content');
+            
+            if (portfolioContent) portfolioContent.style.display = 'none';
+            if (cvContent) cvContent.style.display = 'none';
             
             // 모든 탭 버튼 비활성화
             document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
             
             // 선택된 탭 표시
             if (tabName === 'cv') {
-                document.getElementById('cv-content').style.display = 'block';
-                document.querySelectorAll('.tab-button')[1].classList.add('active');
+                console.log('Showing CV content');
+                if (cvContent) {
+                    cvContent.style.display = 'block';
+                    console.log('CV content displayed:', cvContent.style.display);
+                }
+                const cvButton = document.querySelectorAll('.tab-button')[1];
+                if (cvButton) cvButton.classList.add('active');
+                console.log('CV tab activated successfully');
             } else {
-                document.getElementById('portfolio-content').style.display = 'block';
-                document.querySelectorAll('.tab-button')[0].classList.add('active');
+                console.log('Showing Portfolio content');
+                if (portfolioContent) {
+                    portfolioContent.style.display = 'block';
+                    console.log('Portfolio content displayed:', portfolioContent.style.display);
+                }
+                const portfolioButton = document.querySelectorAll('.tab-button')[0];
+                if (portfolioButton) portfolioButton.classList.add('active');
+                console.log('Portfolio tab activated successfully');
             }
         }
+        
+        // 페이지 로드 시 초기 설정
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting initial tab');
+            // CV 탭으로 초기 설정
+            setTimeout(function() {
+                showTab('cv');
+            }, 100);
+        });
     </script>
 
     <script src="templates/script.js"></script>
