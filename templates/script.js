@@ -151,9 +151,43 @@ function setupCardHoverEffects() {
     });
 }
 
+// 탭 전환 기능
+function showTab(tabName) {
+    // 모든 탭 컨텐츠 숨기기
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // 모든 탭 버튼 비활성화
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // 선택된 탭 컨텐츠 표시
+    const selectedTab = document.getElementById(tabName + '-tab');
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+    
+    // 선택된 탭 버튼 활성화
+    const selectedButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
+    if (selectedButton) {
+        selectedButton.classList.add('active');
+    }
+    
+    // Portfolio 탭이 활성화될 때만 프로젝트 데이터 로드 및 렌더링
+    if (tabName === 'portfolio') {
+        loadProjectData();
+    }
+}
+
 // 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', function() {
-    loadProjectData();
+    // 초기 탭 설정 (portfolio 탭 기본 활성화)
+    showTab('portfolio');
+    
     createParticles();
     setupCardHoverEffects();
     

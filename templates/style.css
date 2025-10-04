@@ -67,6 +67,460 @@ body {
     letter-spacing: 0.01em;
 }
 
+/* 탭 네비게이션 스타일 */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.tab-button {
+    padding: 12px 30px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 25px;
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.tab-button:hover {
+    border-color: rgba(59, 130, 246, 0.7);
+    background: rgba(30, 41, 59, 0.9);
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-color: #3b82f6;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.tab-button.active:hover {
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CV 탭 스타일 */
+.cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.cv-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cv-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.cv-content {
+    width: 100%;
+}
+
+.cv-section {
+    background: rgba(30, 41, 59, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cv-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+.cv-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-item strong {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.info-item span {
+    color: #e2e8f0;
+}
+
+.core-competencies {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.competency-item {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.competency-item h4 {
+    color: #60a5fa;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.competency-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.competency-item li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #cbd5e1 !important;
+    line-height: 1.6;
+    font-weight: 400 !important;
+}
+
+.competency-item li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.edu-year {
+    color: #3b82f6;
+    font-weight: 600;
+    min-width: 150px;
+}
+
+.edu-school {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.cv-content .experience-item {
+    background: rgba(30, 41, 59, 0.4) !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(59, 130, 246, 0.1) !important;
+}
+
+/* 경력사항 요약 스타일 */
+.experience-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience-item-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(30, 41, 59, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid #60a5fa;
+    transition: background-color 0.3s ease;
+}
+
+.experience-item-summary:hover {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.exp-period-summary {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 140px;
+}
+
+.exp-title-summary {
+    color: #ffffff;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.exp-header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exp-title {
+    color: #60a5fa;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
+.exp-period {
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.exp-company {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.exp-details {
+    margin-top: 15px;
+}
+
+.exp-project {
+    margin-bottom: 15px;
+}
+
+.exp-project h5 {
+    color: #93c5fd;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.exp-project ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exp-project li {
+                        position: relative;
+                        padding-left: 20px;
+                        margin-bottom: 6px;
+                        color: #cbd5e1 !important;
+                        line-height: 1.5;
+                        font-weight: 500 !important;
+}
+
+.exp-project li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.education-certificates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cert-item strong {
+    color: #3b82f6;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cert-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cert-item li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #cbd5e1 !important;
+    font-weight: 500 !important;
+}
+
+.cert-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.tech-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-level {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-level strong {
+    color: #3b82f6;
+    min-width: 60px;
+}
+
+.skill-level span {
+    color: #cbd5e1;
+    flex: 1;
+    font-weight: 500;
+}
+
+.motivation {
+    background: rgba(30, 41, 59, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #10b981;
+}
+
+.motivation p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.motivation p:last-child {
+    margin-bottom: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .tab-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .tab-button {
+        width: 200px;
+        padding: 15px 25px;
+    }
+    
+    .cv-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .edu-year {
+        min-width: auto;
+    }
+    
+    .skill-level {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .exp-period {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .experience-item-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .exp-title-summary {
+        margin-left: 0;
+    }
+    
+    .exp-period-summary {
+        min-width: auto;
+    }
+}
+
+/* CV 탭 강제 색상 적용 */
+#cv-tab .competency-item li,
+#cv-tab .exp-project li,
+#cv-tab .cert-item li {
+    color: #cbd5e1 !important;
+    font-weight: 500 !important;
+}
+
+#cv-tab .skill-level span {
+    color: #cbd5e1 !important;
+}
+
+#cv-tab .motivation p {
+    color: #cbd5e1 !important;
+}
+
 
 
 @keyframes iconGlow {
@@ -990,7 +1444,9 @@ body {
     display: block;
     margin-top: 8px;
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
 }
 
 /* 모바일에서 스킬 상세 내용 숨기기 */
@@ -1264,8 +1720,6 @@ body {
     margin-bottom: 20px;
     border-left: 3px solid #ddd;
     padding-left: 15px;
-    background: #fafafa;
-    padding: 15px;
     border-radius: 5px;
 }
 
