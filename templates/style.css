@@ -1205,6 +1205,118 @@ body {
     margin-top: 30px;
 }
 
+/* CV 컨텐츠 스타일 */
+.cv-content {
+    padding: 30px;
+}
+
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.cv-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.cv-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cv-header div:last-child {
+    font-size: 14px;
+    color: #888;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #4c51bf;
+    border-radius: 0 5px 5px 0;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    border-left: 3px solid #ddd;
+    padding-left: 15px;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.company-info {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.period {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.skill-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.cv-content li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.highlight {
+    background-color: #fff3cd;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #856404;
+}
+
 @media (max-width: 768px) {
     .tab-navigation {
         flex-direction: column;
