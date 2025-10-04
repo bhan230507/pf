@@ -1196,6 +1196,15 @@ body {
     display: block;
 }
 
+/* 강제 표시 설정 */
+#portfolio-content {
+    display: block;
+}
+
+#cv-content {
+    display: none;
+}
+
 
 /* CV 컨테이너 스타일 */
 .cv-container {
