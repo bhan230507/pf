@@ -144,12 +144,19 @@
         </div>
         
         <!-- CV 탭 컨텐츠 -->
-        <div id="cv-content" class="tab-content">
-            <div style="background: white; border: 3px solid red; padding: 20px; margin: 20px; border-radius: 10px;">
-                <h1 style="color: red; text-align: center;">CV 탭 테스트</h1>
-                <p>이것이 보이면 탭 전환은 정상 작동합니다.</p>
-                <div class="cv-container">
-                    <iframe src="templates/cv.html" width="100%" height="600px" frameborder="0" style="border-radius: 15px;"></iframe>
+        <div id="cv-content" class="tab-content" style="display: none; position: fixed; top: 50px; left: 50px; right: 50px; bottom: 50px; background: white; border: 10px solid #ff0000; z-index: 9999; overflow: auto;">
+            <div style="padding: 30px; font-size: 20px;">
+                <h1 style="color: #ff0000; text-align: center; font-size: 4em; margin-bottom: 30px;">🎉 CV 탭 성공! 🎉</h1>
+                <p style="color: #333; text-align: center; font-size: 1.5em; margin-bottom: 40px;">탭 전환이 정상 작동합니다!</p>
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <a href="templates/cv.html" target="_blank" style="background: #ff0000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-size: 1.2em;">
+                        🖨️ CV 상세보기 (새창)
+                    </a>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <iframe src="templates/cv.html" width="100%" height="700px" frameborder="0" style="border: 2px solid #333;"></iframe>
                 </div>
             </div>
         </div>
