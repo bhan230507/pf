@@ -162,7 +162,7 @@ function showTab(tabName) {
     });
     
     // 모든 탭 버튼 비활성화
-    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabButtons = document.querySelectorAll('.nav-tab-button');
     tabButtons.forEach(button => {
         button.classList.remove('active');
     });
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 300);
     } else {
-        // 기본 탭 설정
+        // 기본 탭 설정 - 첫 번째 탭(PORTFOLIO) 활성화
         showTab('portfolio');
     }
     
@@ -242,4 +242,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         }
     });
-}); 
+});

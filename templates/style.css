@@ -12,6 +12,148 @@ body {
     overflow-x: hidden;
 }
 
+/* 고정 네비게이션 바 */
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 31, 46, 0.95) 50%, rgba(45, 55, 72, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    letter-spacing: 0.05em;
+}
+
+.nav-subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+/* PC에서 ul li를 텍스트로 변경 */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+li:before {
+    content: "- ";
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.expertise-list li,
+.tech-list li,
+.skills-list li {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 6px;
+}
+
+.expertise-list li:before,
+.tech-list li:before,
+.skills-list li:before {
+    content: "";
+}
+
+/* 상세경력사항과 핵심역량의 ul li도 텍스트로 변경 */
+.exp-details ul li:before,
+.core-competencies ul li:before {
+    content: "- ";
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* 핵심역량도 대시 추가 */
+.skills-list li {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 6px;
+}
+
+.skills-list li:before {
+    content: "- ";
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* 비활성 버튼 - 더 강력한 선택자 */
+.fixed-navbar .nav-tabs .nav-tab-button:not(.active) {
+    background: transparent !important;
+    border: 2px solid rgba(245, 158, 11, 0.2) !important;
+    color: #94a3b8 !important;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.fixed-navbar .nav-tabs .nav-tab-button:not(.active):hover {
+    border-color: rgba(245, 158, 11, 0.5) !important;
+    color: #cbd5e1 !important;
+    background: transparent !important;
+    transform: none;
+}
+
+/* 활성 버튼 - 더 강력한 선택자 */
+.fixed-navbar .nav-tabs .nav-tab-button.active {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24) !important;
+    border-color: #f59e0b !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    transform: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.nav-spacer {
+    height: 40px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -67,43 +209,6 @@ body {
     letter-spacing: 0.01em;
 }
 
-/* 탭 네비게이션 스타일 */
-.tab-navigation {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    gap: 10px;
-}
-
-.tab-button {
-    padding: 12px 30px;
-    background: rgba(30, 41, 59, 0.8);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 25px;
-    color: #e2e8f0;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.tab-button:hover {
-    border-color: rgba(59, 130, 246, 0.7);
-    background: rgba(30, 41, 59, 0.9);
-    transform: translateY(-2px);
-}
-
-.tab-button.active {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    border-color: #3b82f6;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-    transform: translateY(-2px);
-}
-
-.tab-button.active:hover {
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-}
 
 .tab-content {
     display: none;
@@ -154,12 +259,13 @@ body {
 }
 
 .cv-section {
-    background: rgba(30, 41, 59, 0.3);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%);
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
-    border: 1px solid rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .cv-section-title {
@@ -201,15 +307,191 @@ body {
 
 @media (max-width: 768px) {
     .core-competencies {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .competency-item {
+        padding: 15px !important;
+        border-radius: 8px !important;
+    }
+    
+    .competency-item h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+        line-height: 1.4 !important;
+    }
+    
+    .competency-item li {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 6px !important;
+        padding-left: 18px !important;
+    }
+    
+    .competency-item li:before {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .competency-item {
+        padding: 12px !important;
+        border-radius: 6px !important;
+    }
+    
+    .competency-item h4 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .competency-item li {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 5px !important;
+        padding-left: 16px !important;
+    }
+    
+    .competency-item li:before {
+        font-size: 0.75rem !important;
+    }
+    
+    /* 프로젝트 날짜 기간 텍스트 크기 축소 (더 작은 화면) */
+    .project-period {
+        font-size: 0.7rem !important;
+        font-weight: 400 !important;
+    }
+    
+    /* 경력사항 기간 텍스트 크기 축소 및 오른쪽 배치 (더 작은 화면) */
+    .exp-period {
+        font-size: 0.75rem !important;
+        font-weight: 500 !important;
+        text-align: right !important;
+        flex-shrink: 0 !important;
+        margin-left: auto !important;
+        min-width: 100px !important;
+    }
+    
+    .cv-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 3px !important;
+        margin: 0 !important;
+    }
+    
+    /* CV 컨테이너 전체 여백 최소화 (더 작은 화면) */
+    .container {
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+    
+    /* CV 헤더 여백 최소화 (더 작은 화면) */
+    .cv-header {
+        margin-bottom: 15px !important;
+        padding: 10px !important;
+    }
+    
+    /* 탭 네비게이션 여백 최소화 (더 작은 화면) */
+    .tab-navigation {
+        margin-bottom: 10px !important;
+    }
+    
+    /* 재직 중, 퇴직사유 div 최적화 (숨기지 않고 크기만 조정) */
+    div[style*="margin-top: 15px; color: #10b981; font-style: italic;"] {
+        margin-top: 8px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* CV 섹션 마진/패딩 최적화 (더 작은 화면) */
+    .cv-section {
+        padding: 10px !important;
+        margin-bottom: 10px !important;
+        border-radius: 8px !important;
+    }
+    
+    .cv-section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 6px !important;
+    }
+    
+    /* 전체 CV 글자 크기 통일 (더 작은 화면) */
+    .exp-title {
+        font-size: 0.95rem !important;
+    }
+    
+    .exp-project h5 {
+        font-size: 0.85rem !important;
+    }
+    
+    .exp-project li {
+        font-size: 0.8rem !important;
+    }
+    
+    .education-item .edu-year {
+        font-size: 0.8rem !important;
+    }
+    
+    .education-item .edu-school {
+        font-size: 0.8rem !important;
+    }
+    
+    .info-item strong {
+        font-size: 0.85rem !important;
+    }
+    
+    .info-item span {
+        font-size: 0.8rem !important;
+    }
+    
+    .motivation p {
+        font-size: 0.8rem !important;
+    }
+    
+    .motivation {
+        margin-bottom: 10px !important;
+    }
+    
+    .cert-item strong {
+        font-size: 0.85rem !important;
+    }
+    
+    .cert-item li {
+        font-size: 0.8rem !important;
+    }
+    
+    /* 컴퓨터, 외국어 섹션 글자 크기 조정 */
+    .skill-row {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 6px !important;
+    }
+    
+    /* 프로젝트 날짜 기간 텍스트 크기 축소 */
+    .project-period {
+        font-size: 0.75rem !important;
+        font-weight: 400 !important;
+    }
+    
+    /* 경력사항 기간 텍스트 크기 축소 및 오른쪽 배치 */
+    .exp-period {
+        font-size: 0.8rem !important;
+        font-weight: 500 !important;
+        text-align: right !important;
+        flex-shrink: 0 !important;
+        margin-left: auto !important;
+        min-width: 120px !important;
     }
 }
 
 .competency-item {
-    background: rgba(30, 41, 59, 0.5);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%);
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .competency-item h4 {
@@ -241,6 +523,125 @@ body {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .core-competencies {
+        gap: 10px !important;
+    }
+    
+    .competency-item {
+        padding: 10px !important;
+        border-radius: 6px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .competency-item h4 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .competency-item li {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 4px !important;
+        padding-left: 14px !important;
+    }
+    
+    .competency-item li:before {
+        content: "-" !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .cv-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+    
+    /* CV 컨테이너 전체 여백 최소화 */
+    .container {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+    
+    /* CV 헤더 여백 최소화 */
+    .cv-header {
+        margin-bottom: 20px !important;
+        padding: 15px !important;
+    }
+    
+    /* 탭 네비게이션 여백 최소화 */
+    .tab-navigation {
+        margin-bottom: 15px !important;
+    }
+    
+    /* 재직 중, 퇴직사유 div 최적화 (숨기지 않고 크기만 조정) */
+    div[style*="margin-top: 15px; color: #10b981; font-style: italic;"] {
+        margin-top: 8px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* CV 섹션 마진/패딩 최적화 */
+    .cv-section {
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+        border-radius: 10px !important;
+    }
+    
+    .cv-section-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+        padding-bottom: 8px !important;
+    }
+    
+    /* 전체 CV 글자 크기 통일 */
+    .exp-title {
+        font-size: 1rem !important;
+    }
+    
+    .exp-project h5 {
+        font-size: 0.9rem !important;
+    }
+    
+    .exp-project li {
+        font-size: 0.85rem !important;
+    }
+    
+    .education-item .edu-year {
+        font-size: 0.85rem !important;
+    }
+    
+    .education-item .edu-school {
+        font-size: 0.85rem !important;
+    }
+    
+    .info-item strong {
+        font-size: 0.9rem !important;
+    }
+    
+    .info-item span {
+        font-size: 0.85rem !important;
+    }
+    
+    .motivation p {
+        font-size: 0.85rem !important;
+    }
+    
+    .motivation {
+        margin-bottom: 8px !important;
+    }
+    
+    .cert-item strong {
+        font-size: 0.9rem !important;
+    }
+    
+    .cert-item li {
+        font-size: 0.85rem !important;
+    }
+}
+
 .education-item {
     display: flex;
     justify-content: space-between;
@@ -265,11 +666,12 @@ body {
 }
 
 .cv-content .experience-item {
-    background: rgba(30, 41, 59, 0.4) !important;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%) !important;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid rgba(59, 130, 246, 0.1) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* 경력사항 요약 스타일 */
@@ -332,6 +734,7 @@ body {
     margin-bottom: 5px;
     flex-shrink: 0;
     text-align: right;
+    margin-left: auto;
 }
 
 .exp-company {
@@ -444,10 +847,12 @@ body {
 }
 
 .motivation {
-    background: rgba(30, 41, 59, 0.4);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%);
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #10b981;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
 }
 
 .motivation p {
@@ -524,18 +929,21 @@ body {
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .tab-navigation {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
     }
     
     .tab-button {
-        width: 200px;
-        padding: 15px 25px;
+        width: auto;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 20px;
     }
     
     .cv-info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
     
     .education-item {
@@ -632,7 +1040,7 @@ body {
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     height: 420px;
@@ -712,8 +1120,8 @@ body {
 
 .card:hover {
     transform: translateY(-5px) scale(1.01);
-    border-color: #3b82f6;
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+    border-color: #f59e0b;
+    box-shadow: 0 15px 40px rgba(245, 158, 11, 0.2);
     animation-play-state: paused;
     z-index: 5;
 }
@@ -725,7 +1133,7 @@ body {
 
 .card:hover::before {
     transform: scaleX(1);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.8);
 }
 
 .card:hover .card-thumbnail::before {
@@ -806,8 +1214,8 @@ body {
 }
 
 .card:hover .card-title {
-    color: #3b82f6;
-    text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    color: #f59e0b;
+    text-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
     transform: scale(1.01);
 }
 
@@ -820,9 +1228,9 @@ body {
 }
 
 .card:hover .card-description-wrapper {
-    border-color: #3b82f6;
-    background: rgba(59, 130, 246, 0.05);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
 }
 
 .card-description {
@@ -1007,7 +1415,7 @@ body {
 
 .card:hover .author-avatar {
     transform: scale(1.1) rotate(180deg);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
 }
 
 @keyframes avatarPulse {
@@ -1035,21 +1443,21 @@ body {
 }
 
 .card:hover .card-port {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.6);
     transform: scale(1.02);
-    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
 }
 
-.rarity-common { border-color: #9d9d9d; }
-.rarity-rare { border-color: #0070dd; }
-.rarity-epic { border-color: #a335ee; }
-.rarity-legendary { border-color: #ff8000; }
+.rarity-common { border-color: #f59e0b; }
+.rarity-rare { border-color: #f59e0b; }
+.rarity-epic { border-color: #f59e0b; }
+.rarity-legendary { border-color: #f59e0b; }
 
-.card.rarity-common::before { background: linear-gradient(90deg, #9d9d9d, #c0c0c0, #9d9d9d); }
-.card.rarity-rare::before { background: linear-gradient(90deg, #0070dd, #4a9eff, #0070dd); }
-.card.rarity-epic::before { background: linear-gradient(90deg, #a335ee, #c866ff, #a335ee); }
-.card.rarity-legendary::before { background: linear-gradient(90deg, #ff8000, #ffb366, #ff8000); }
+.card.rarity-common::before { background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b); }
+.card.rarity-rare::before { background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b); }
+.card.rarity-epic::before { background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b); }
+.card.rarity-legendary::before { background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b); }
 
 @media (max-width: 768px) {
     .academic-title {
@@ -1075,6 +1483,7 @@ body {
     
     .card {
         height: 380px;
+        margin-bottom: 15px;
     }
     
     .card-thumbnail {
@@ -1082,8 +1491,369 @@ body {
     }
     
     .card-content {
-        padding: 15px;
+        padding: 12px;
     }
+    
+    .card-title {
+        font-size: 1.1rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .card-description {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .card-meta {
+        font-size: 0.8rem !important;
+    }
+    
+    .card-port, .card-period {
+        font-size: 0.75rem !important;
+        padding: 4px 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+    
+    .portfolio-container {
+        padding: 15px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .portfolio-summary {
+        padding: 15px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .card {
+        height: 350px !important;
+        margin-bottom: 12px !important;
+        border-radius: 12px !important;
+    }
+    
+    .card-thumbnail {
+        height: 160px !important;
+    }
+    
+    .card-content {
+        padding: 10px !important;
+    }
+    
+    .card-title {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .card-description {
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .card-meta {
+        font-size: 0.75rem !important;
+    }
+    
+    .card-port, .card-period {
+        font-size: 0.7rem !important;
+        padding: 3px 6px !important;
+    }
+    
+    .cards-grid {
+        gap: 15px !important;
+        padding: 10px 0 !important;
+    }
+    
+    .academic-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .subtitle {
+        font-size: 0.8rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .academic-description {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .summary-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .summary-description {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* 모바일 네비게이션 바 */
+    .nav-container {
+        padding: 10px 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    .nav-title {
+        text-align: center !important;
+    }
+    
+    .nav-name {
+        font-size: 1.3rem !important;
+    }
+    
+    .nav-subtitle {
+        font-size: 0.75rem !important;
+    }
+    
+    .nav-tabs {
+        gap: 3px !important;
+        align-self: flex-end !important;
+    }
+    
+    .fixed-navbar .nav-tabs .nav-tab-button:not(.active) {
+        padding: 4px 10px !important;
+        font-size: 0.7rem !important;
+        border-radius: 4px !important;
+        background: transparent !important;
+        border: 1px solid rgba(245, 158, 11, 0.2) !important;
+        color: #94a3b8 !important;
+    }
+    
+    .fixed-navbar .nav-tabs .nav-tab-button:not(.active):hover {
+        border-color: rgba(245, 158, 11, 0.5) !important;
+        color: #cbd5e1 !important;
+        background: transparent !important;
+    }
+    
+    .fixed-navbar .nav-tabs .nav-tab-button.active {
+        background: linear-gradient(135deg, #f59e0b, #fbbf24) !important;
+        border-color: #f59e0b !important;
+        color: #ffffff !important;
+        padding: 4px 10px !important;
+        font-size: 0.7rem !important;
+        border-radius: 4px !important;
+    }
+    
+    .nav-spacer {
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 4px 15px !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    
+    .nav-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .nav-name {
+        font-size: 1.3rem !important;
+    }
+    
+    .nav-subtitle {
+        font-size: 0.7rem !important;
+        text-align: left !important;
+    }
+    
+    .nav-tab-button {
+        padding: 4px 10px !important;
+        font-size: 0.7rem !important;
+        min-height: 32px !important;
+        border-radius: 4px !important;
+    }
+    
+    .nav-spacer {
+        height: 100px !important;
+    }
+    
+    /* 모바일에서 ul li를 텍스트로 변경 */
+    ul {
+        list-style: none !important;
+        padding-left: 0 !important;
+        margin: 0 !important;
+    }
+    
+    li {
+        margin-bottom: 4px !important;
+    }
+    
+    li:before {
+        content: "- " !important;
+        color: #f59e0b !important;
+        font-weight: bold !important;
+    }
+    
+    .expertise-list li,
+    .tech-list li,
+    .skills-list li {
+        display: inline-block !important;
+        margin-right: 8px !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .expertise-list li:before,
+    .tech-list li:before {
+        content: "" !important;
+    }
+    
+    .skills-list li:before {
+        content: "- " !important;
+        color: #f59e0b !important;
+        font-weight: bold !important;
+    }
+    
+    /* 상세경력사항과 핵심역량의 ul li도 텍스트로 변경 */
+    .exp-details ul li:before,
+    .core-competencies ul li:before {
+        content: "- " !important;
+        color: #f59e0b !important;
+        font-weight: bold !important;
+    }
+    
+    /* 모바일에서 모든 콘텐츠 텍스트 크기 통일 */
+    .exp-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .exp-details li {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .skill-row {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* 모든 텍스트 크기 통일 */
+    p, span, div, li {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* 제목들은 조금 더 크게 */
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 0.9rem !important;
+    }
+    
+    /* 특별한 경우들 제외 */
+    .nav-name, .nav-subtitle, .nav-tab-button {
+        font-size: inherit !important;
+    }
+    
+    /* 모바일 Footer */
+    .footer-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .footer {
+        padding: 20px 0 !important;
+        margin-top: 30px !important;
+    }
+    
+    .footer-content h4 {
+        font-size: 1rem !important;
+    }
+    
+    .contact-item {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .contact-item a {
+        font-size: 0.8rem !important;
+    }
+    
+    .copyright {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 31, 46, 0.95) 50%, rgba(45, 55, 72, 0.95) 100%);
+    border-top: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-content h4 {
+    color: #f59e0b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-separator {
+    color: #64748b;
+    font-weight: 300;
+}
+
+.contact-item a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #f59e0b;
+}
+
+.copyright {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .floating-particles {
@@ -1166,10 +1936,10 @@ body {
 }
 
 .card:hover .card-period {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.6);
     transform: scale(1.02);
-    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
 }
 
 .detail-category {
@@ -1574,18 +2344,28 @@ body {
     }
     
     .summary-content {
-        gap: 20px;
+        gap: 5px;
+    }
+    
+    .summary-section {
+        padding: 15px !important;
+    }
+    
+    .summary-section ul {
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     .expertise-list {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
     }
     
     .expertise-list li {
-        padding: 10px 12px;
-        padding-left: 30px;
-        font-size: 0.9rem;
+        padding: 3px 5px;
+        font-size: 0.7rem;
+        line-height: 1.3;
     }
     
     .tech-list {
@@ -1858,17 +2638,19 @@ body {
 
 @media (max-width: 768px) {
     .tab-navigation {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 6px;
     }
     
     .tab-button {
-        width: 200px;
-        padding: 12px 20px;
+        width: auto;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        border-radius: 18px;
     }
     
     .cv-container {
         margin-top: 20px;
     }
-} 
+}

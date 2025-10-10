@@ -14,22 +14,26 @@
 <body>
     <div class="floating-particles" id="particles"></div>
     
-    <div class="container">
-        <div class="header">
-            <div class="title-container">
-                <h1 class="academic-title">HAN GI JUNG</h1>
-                <div class="subtitle">Data Engineering & Analytics & AI Portfolio</div>
+    <!-- 고정 네비게이션 바 -->
+    <nav class="fixed-navbar">
+        <div class="nav-container">
+            <div class="nav-title">
+                <h1 class="nav-name">HAN GI JUNG</h1>
+                <div class="nav-subtitle">Data Engineering & Analytics & AI Portfolio</div>
+            </div>
+            <div class="nav-tabs">
+                <button class="nav-tab-button" onclick="showTab('portfolio')">PORTFOLIO</button>
+                <button class="nav-tab-button" onclick="showTab('cv')">CV</button>
             </div>
         </div>
+    </nav>
 
-        <!-- 탭 네비게이션 -->
-        <div class="tab-navigation">
-            <button class="tab-button active" onclick="showTab('portfolio')">PORTFOLIO</button>
-            <button class="tab-button" onclick="showTab('cv')">CV</button>
-        </div>
+    <div class="container">
+        <!-- 상단 여백 (네비게이션 바 높이만큼) -->
+        <div class="nav-spacer"></div>
 
         <!-- 포트폴리오 탭 -->
-        <div id="portfolio-tab" class="tab-content active">
+        <div id="portfolio-tab" class="tab-content">
             <!-- 포트폴리오 요약 섹션 -->
             <div class="portfolio-summary">
                 <div class="summary-header">
@@ -266,7 +270,7 @@
                     <h3 class="cv-section-title">경력사항</h3>
                     <div class="education-item">
                         <div class="edu-year">2023년 07월 - 2025년 현재</div>
-                        <div class="edu-school">주식회사기영어프앤비 / 데이터분석팀 팀원 (과장)</div>
+                        <div class="edu-school">주식회사기영에프앤비 / 데이터분석팀 팀원 (과장)</div>
                     </div>
                     <div class="education-item">
                         <div class="edu-year">2022년 07월 - 2023년 07월</div>
@@ -292,7 +296,8 @@
                             <div class="exp-period">2023년 07월 - 2025년 현재</div>
                             <div class="exp-company">회사 개요: 외식업 / 매출액 1,200억 / 직원수 120명</div>
                         </div>
-                        <div class="exp-project">
+                        <div class="exp-details">
+                            <div class="exp-project">
                                 <h5>ElasticSearch 및 AI 기반 분석 시스템 구축 계획<span class="project-period">진행중</span></h5>
                                 <ul>
                                     <li>Kafka-Logstash-Elasticsearch-Kibana 데이터 파이프라인 설계</li>
@@ -362,7 +367,8 @@
                                     <li>외주 서비스 API를 활용해 약 5년간의 과거 데이터와 실시간 데이터를 MySQL로 수집, 통합 저장</li>
                                     <li>3개 브랜드(두찜, 기영이숯불치킨, 떡볶이 참 잘하는집)의 데이터 구조를 표준화하고 통합 관리 체계 설계</li>
                                 </ul>
-                            </div><div style="margin-top: 15px; color: #10b981; font-style: italic;">
+                            </div>
+                            <div style="margin-top: 15px; color: #10b981; font-style: italic;">
                                 ☞ 재직 중: 데이터 기반 의사결정 지원 및 분석 시스템 고도화를 통한 비즈니스 성과 창출
                             </div>
                         </div>
@@ -469,51 +475,58 @@
                 <div class="cv-section">
                     <h3 class="cv-section-title">자격/교육/컴퓨터/외국어/수상실적</h3>
                     
-                    <div class="education-certificates">
-                        <div class="cert-item">
-                            <strong>자격사항</strong>
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div class="exp-title" style="color: #60a5fa;">자격사항</div>
+                        </div>
+                        <div class="exp-details">
                             <ul>
-                                <li>전기기사 (한국전기안전공사, 2019년)</li>
+                                <li style="color: #cbd5e1;">전기기사 (한국전기안전공사, 2019년)</li>
                             </ul>
                         </div>
-                        
-                        <div class="cert-item">
-                            <strong>교육 이수 사항</strong>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div class="exp-title" style="color: #60a5fa;">교육 이수 사항</div>
+                        </div>
+                        <div class="exp-details">
                             <ul>
-                                <li>Google Data Analytics (Coursera, Google) - 5개 과정 완료</li>
-                                <li>Introduction to Big Data with Spark and Hadoop (Coursera, IBM) - 100% 완료</li>
-                                <li>Real-time analytics with Spark: User Activity Monitoring (Coursera, Coursera Project Network) - 100% 완료</li>
-                                <li>Foundations of Elasticsearch (Coursera, Packt) - 100% 완료</li>
-                                <li>Apache Airflow 기초 및 실무 (온라인, 2023년 6월)</li>
+                                <li style="color: #cbd5e1;">Google Data Analytics (Coursera, Google) - 5개 과정 완료</li>
+                                <li style="color: #cbd5e1;">Introduction to Big Data with Spark and Hadoop (Coursera, IBM) - 100% 완료</li>
+                                <li style="color: #cbd5e1;">Real-time analytics with Spark: User Activity Monitoring (Coursera, Coursera Project Network) - 100% 완료</li>
+                                <li style="color: #cbd5e1;">Foundations of Elasticsearch (Coursera, Packt) - 100% 완료</li>
+                                <li style="color: #cbd5e1;">Apache Airflow 기초 및 실무 (온라인, 2023년 6월)</li>
                             </ul>
                         </div>
-                        
-                        <div class="cert-item">
-                            <strong>컴퓨터</strong>
-                            <div class="computer-skills">
-                                <div class="skill-row">워드 : 중 / 엑셀 : 상 / 파워포인트 : 중</div>
-                                <div class="skill-row">기타 : Python : 상 / SQL : 중상 / Django : 중상 / ApacheAirflow : 중상 / GCP : 중상</div>
-                            </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div class="exp-title" style="color: #60a5fa;">컴퓨터</div>
                         </div>
-                        
-                        <div class="cert-item">
-                            <strong>외국어</strong>
-                            <div class="language-skills">
-                                <div class="skill-row">영어 : 중 (TOEIC 865점, 2019년 만료) / 말하기 및 문서작성 - 중, 읽기 및 독해 - 상</div>
-                            </div>
+                        <div class="exp-details">
+                            <div class="skill-row" style="color: #cbd5e1;">워드 : 중 / 엑셀 : 상 / 파워포인트 : 중</div>
+                            <div class="skill-row" style="color: #cbd5e1;">기타 : Python : 상 / SQL : 중상 / Django : 중상 / ApacheAirflow : 중상 / GCP : 중상</div>
                         </div>
-                        
-                        <div class="cert-item">
-                            <div class="skill-row"><strong>수상실적</strong></div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div class="exp-title" style="color: #60a5fa;">외국어</div>
+                        </div>
+                        <div class="exp-details">
+                            <div class="skill-row" style="color: #cbd5e1;">영어 : 중 (TOEIC 865점, 2019년 만료) / 말하기 및 문서작성 - 중, 읽기 및 독해 - 상</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div class="exp-title" style="color: #60a5fa;">수상실적</div>
+                        </div>
+                        <div class="exp-details">
                             <ul class="awards">
-                                <li>CERTIFICATE OF RECOGNITION (Chevron, 2019년)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="cert-item" style="display: none;">
-                            <strong>병역</strong>
-                            <ul>
-                                <li>육군 병장 만기 제대 (기간 : 2005년 04월 ~ 2007년 04월)</li>
+                                <li style="color: #cbd5e1;">CERTIFICATE OF RECOGNITION (Chevron, 2019년)</li>
                             </ul>
                         </div>
                     </div>
@@ -556,26 +569,26 @@
                 </div>
 
                 <!-- 목표 -->
-                <div class="cv-section">
+                <div class="cv-section goal-section">
                     <h3 class="cv-section-title">목표</h3>
-                    <div class="motivation">
+                    <div class="motivation goal-motivation">
                         <p style="margin-top: 15px;">
-                            <strong>Python + Django + Apache Airflow + GCP</strong> 기반의 차세대 데이터 플랫폼을 설계하여 
-                            실시간 데이터 처리를 넘어선 <strong>AI 기반 예측 분석 시스템</strong>을 구축하겠습니다. 
+                            Python + Django + Apache Airflow + GCP 기반의 차세대 데이터 플랫폼을 설계하여 
+                            실시간 데이터 처리를 넘어선 AI 기반 예측 분석 시스템을 구축하겠습니다. 
                             현재 달성한 데이터 처리 성능 40% 향상을 넘어서, 
-                            <strong>ElasticSearch와 머신러닝을 결합한 지능형 분석 엔진</strong>을 개발하여 
+                            ElasticSearch와 머신러닝을 결합한 지능형 분석 엔진을 개발하여 
                             텍스트 데이터부터 구조화된 데이터까지 통합 분석이 가능한 플랫폼을 만들겠습니다.
                         </p>
                         <p style="margin-top: 15px;">
-                            특히 기존 <strong>MySQL, Redis, PostgreSQL</strong> 활용 경험을 바탕으로 
-                            <strong>올 하이퍼브리드 데이터 웨어하우스</strong>를 설계하여, 
+                            특히 기존 MySQL, Redis, PostgreSQL 활용 경험을 바탕으로 
+                            올 하이퍼브리드 데이터 웨어하우스를 설계하여, 
                             대용량 데이터의 실시간 처리와 장기 보존을 동시에 가능하게 하고, 
-                            <strong>D3.js 시각화 기술</strong>과 결합하여 데이터 인사이트를 
+                            D3.js 시각화 기술과 결합하여 데이터 인사이트를 
                             직관적으로 전달할 수 있는 대시보드 생태계를 구축하겠습니다.
                         </p>
                         <p style="margin-top: 15px;">
                             궁극적으로는 현재 포트에서의 ETL 파이프라인 운영 경험을 바탕으로 
-                            <strong>클라우드 네이티브 데이터 아키텍처 전문가</strong>가 되어 
+                            <strong style="color: #fde047 !important;">클라우드 네이티브 데이터 아키텍처 전문가 <span style="font-size: 0.8em;">(Cloud-Native Data Architecture Expert)</span></strong>가 되어 
                             차세대 데이터 인프라의 표준을 만들어가는 것이 목표입니다.
                         </p>
                     </div>
@@ -583,6 +596,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h4>Contact</h4>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="mailto:gijungcpy@gmail.com">gijungcpy@gmail.com</a>
+                    <span class="contact-separator">|</span>
+                    <a href="tel:010-8805-6438">010-8805-6438</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- 이미지 모달 -->
     <div class="image-modal" id="imageModal">
