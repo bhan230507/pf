@@ -1,0 +1,43 @@
+{
+  "challengeProjects": [
+    {
+      "id": 1,
+      "title": "도전 정신",
+      "description": "새로운 기술과 방법론을 학습하고 적용하여 더 나은 솔루션을 찾아갑니다.",
+      "detailDescription": "지속적인 학습과 실험을 통해 혁신적인 솔루션을 개발합니다. 최신 기술 트렌드를 파악하고 새로운 도구와 프레임워크를 적극적으로 학습하며, 기존 방식에 만족하지 않고 더 효율적이고 혁신적인 방법을 찾기 위해 끊임없이 실험합니다.",
+      "features": ["최신 기술 트렌드 파악", "실험적 접근", "체계적 문제 해결", "지속적 자기계발"],
+      "thumbnail": "templates/history/20250919_KY_ETL_flow.png",
+      "author": "한기정",
+      "category": "Innovation & Learning",
+      "rarity": "legendary",
+      "techStack": ["Machine Learning", "Cloud Computing", "Data Engineering", "Automation", "Continuous Learning"],
+      "period": "2024"
+    },
+    {
+      "id": 2,
+      "title": "문제 해결",
+      "description": "데이터 기반의 체계적인 접근으로 복잡한 비즈니스 문제를 해결합니다.",
+      "detailDescription": "대용량 데이터 분석을 통해 숨겨진 패턴을 발견하고 비즈니스 인사이트를 도출합니다. 전체적인 관점에서 문제를 바라보고 시스템 레벨에서의 해결책을 제시하며, 반복적인 작업을 자동화하여 효율성을 극대화하고 오류를 최소화합니다.",
+      "features": ["데이터 기반 의사결정", "시스템적 사고", "자동화 솔루션", "효율성 극대화"],
+      "thumbnail": "templates/history/datacenter_대시보드.png",
+      "author": "한기정",
+      "category": "Problem Solving & Analytics",
+      "rarity": "epic",
+      "techStack": ["Data Analysis", "Business Intelligence", "Process Automation", "System Design", "Statistical Analysis"],
+      "period": "2024"
+    },
+    {
+      "id": 3,
+      "title": "혁신적 사고",
+      "description": "기존의 틀에 얽매이지 않고 창의적이고 효율적인 방법을 모색합니다.",
+      "detailDescription": "전통적인 방법을 넘어서 새로운 관점에서 문제를 바라보고 혁신적인 해결책을 제시합니다. 최소한의 리소스로 최대한의 효과를 얻을 수 있는 방법을 찾으며, 현재의 요구사항뿐만 아니라 미래의 확장성과 유지보수성을 고려합니다.",
+      "features": ["창의적 접근", "효율성 추구", "미래 지향적 사고", "혁신적 솔루션"],
+      "thumbnail": "templates/history/상권분석_맵_1.png",
+      "author": "한기정",
+      "category": "Creative Thinking & Innovation",
+      "rarity": "rare",
+      "techStack": ["Innovation Management", "Creative Problem Solving", "Future Planning", "Strategic Thinking", "Design Thinking"],
+      "period": "2024"
+    }
+  ]
+}

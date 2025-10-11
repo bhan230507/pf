@@ -24,6 +24,10 @@
             <div class="nav-tabs">
                 <button class="nav-tab-button" onclick="showTab('portfolio')">PORTFOLIO</button>
                 <button class="nav-tab-button" onclick="showTab('cv')">CV</button>
+                <button class="nav-tab-button challenge-nav-btn" onclick="showTab('challenge')">
+                    <span class="btn-text">CHALLENGE MORE</span>
+                    <span class="btn-icon">🚀</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -579,6 +583,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- Challenge Tab -->
+        <div id="challenge-tab" class="tab-content">
+            <!-- Challenge 요약 섹션 -->
+            <div class="portfolio-summary">
+                <div class="summary-header">
+                    <h2 class="summary-title">🚀 CHALLENGE. THINK. SOLVE.</h2>
+                    <p class="summary-subtitle">Making complex problems simple, turning impossible into possible.</p>
+                </div>
+                
+                <div class="summary-content">
+                    <div class="cards-grid" id="challenge-cards">
+                        <!-- Challenge 카드들이 여기에 동적으로 생성됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -604,6 +625,10 @@
         <div class="mobile-nav-item" onclick="showTab('cv')">
             <div class="nav-icon">👤</div>
             <span>CV</span>
+        </div>
+        <div class="mobile-nav-item" onclick="showTab('challenge')">
+            <div class="nav-icon">🚀</div>
+            <span>Challenge</span>
         </div>
         <div class="mobile-nav-item" onclick="window.open('mailto:gijungcpy@gmail.com')">
             <div class="nav-icon">📨</div>

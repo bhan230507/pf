@@ -1,17 +1,32 @@
 // 포트폴리오 프로젝트 데이터를 저장할 변수
 let portfolioProjects = [];
+let challengeData = [];
 
-// JSON 파일에서 데이터 로드
+// JSON 파일에서 포트폴리오 데이터 로드
 async function loadProjectData() {
     try {
-        const response = await fetch('templates/data.json');
+        const response = await fetch('templates/portfolio.json');
         const data = await response.json();
         portfolioProjects = data.portfolioProjects;
         renderCards();
     } catch (error) {
-        console.error('데이터 로드 중 오류 발생:', error);
+        console.error('포트폴리오 데이터 로드 중 오류 발생:', error);
         // 오류 시 기본 데이터 사용
         portfolioProjects = [];
+    }
+}
+
+// JSON 파일에서 Challenge 데이터 로드
+async function loadChallengeData() {
+    try {
+        const response = await fetch('templates/challenge.json');
+        const data = await response.json();
+        challengeData = data.challengeProjects;
+        renderChallengeCards();
+    } catch (error) {
+        console.error('Challenge 데이터 로드 중 오류 발생:', error);
+        // 오류 시 기본 데이터 사용
+        challengeData = [];
     }
 }
 
@@ -64,18 +79,36 @@ function openProject(id) {
     if (project) {
         // 프로젝트별 상세 페이지로 이동
         const projectPages = {
-            1: 'templates/project1-etl.html',
-            2: 'templates/project2-promotion.html',
-            3: 'templates/project3-realtime.html',
-            4: 'templates/project4-dashboard.html',
-            5: 'templates/project5-trend.html',
-            6: 'templates/project6-rag.html',
-            7: 'templates/project7-geospatial.html',
-            8: 'templates/project8-keyword.html',
-            9: 'templates/project9-baemin.html'
+            1: 'templates/portfolioProjects/project1-etl.html',
+            2: 'templates/portfolioProjects/project2-promotion.html',
+            3: 'templates/portfolioProjects/project3-realtime.html',
+            4: 'templates/portfolioProjects/project4-dashboard.html',
+            5: 'templates/portfolioProjects/project5-trend.html',
+            6: 'templates/portfolioProjects/project6-rag.html',
+            7: 'templates/portfolioProjects/project7-geospatial.html',
+            8: 'templates/portfolioProjects/project8-keyword.html',
+            9: 'templates/portfolioProjects/project9-baemin.html'
         };
         
         const pageUrl = projectPages[id];
+        if (pageUrl) {
+            window.location.href = pageUrl;
+        }
+    }
+}
+
+// Challenge 상세 보기 함수
+function openChallenge(id) {
+    const challenge = challengeData.find(c => c.id === id);
+    if (challenge) {
+        // Challenge별 상세 페이지로 이동
+        const challengePages = {
+            1: 'templates/challenge/challenge1.html',
+            2: 'templates/challenge/challenge2.html',
+            3: 'templates/challenge/challenge3.html'
+        };
+        
+        const pageUrl = challengePages[id];
         if (pageUrl) {
             window.location.href = pageUrl;
         }
@@ -88,6 +121,57 @@ function renderCards() {
     if (cardsGrid) {
         cardsGrid.innerHTML = portfolioProjects.map(project => createCard(project)).join('');
     }
+}
+
+// Challenge 카드 렌더링
+function renderChallengeCards() {
+    const challengeCardsGrid = document.getElementById('challenge-cards');
+    if (challengeCardsGrid) {
+        challengeCardsGrid.innerHTML = challengeData.map(challenge => createChallengeCard(challenge)).join('');
+    }
+}
+
+// Challenge 카드 생성
+function createChallengeCard(challenge) {
+    const featuresList = challenge.features.map(feature => `<li>${feature}</li>`).join('');
+    const techStackList = challenge.techStack.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+    
+    return `
+        <div class="card rarity-${challenge.rarity}" onclick="openChallenge(${challenge.id})">
+            <div class="card-thumbnail">
+                <img src="${challenge.thumbnail}" alt="${challenge.title}" loading="lazy" class="clickable-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">${challenge.title}</h3>
+                <div class="card-category">${challenge.category}</div>
+                <div class="card-description-wrapper">
+                    <p class="card-description">${challenge.description}</p>
+                </div>
+                <div class="card-meta">
+                    <div class="card-author">
+                        <div class="author-avatar">${challenge.author.charAt(0)}</div>
+                        <span class="author-name">${challenge.author}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-detail">
+                <h3 class="detail-title">${challenge.title}</h3>
+                <div class="detail-category">${challenge.category}</div>
+                <div class="detail-description-wrapper">
+                    <p class="detail-description">${challenge.detailDescription}</p>
+                </div>
+                <div class="tech-stack">
+                    <h4>기술 스택</h4>
+                    <div class="tech-tags">
+                        ${techStackList}
+                    </div>
+                </div>
+                <ul class="detail-features">
+                    ${featuresList}
+                </ul>
+            </div>
+        </div>
+    `;
 }
 
 // 파티클 효과 생성
@@ -194,6 +278,11 @@ function showTab(tabName) {
     // Portfolio 탭이 활성화될 때만 프로젝트 데이터 로드 및 렌더링
     if (tabName === 'portfolio') {
         loadProjectData();
+    }
+    
+    // Challenge 탭이 활성화될 때 Challenge 데이터 로드 및 카드 렌더링
+    if (tabName === 'challenge') {
+        loadChallengeData();
     }
 }
 
