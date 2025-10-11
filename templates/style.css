@@ -1875,6 +1875,17 @@ li:before {
     }
 }
 
+/* PC에서는 모바일 하단 네비게이션 숨기기 */
+@media (min-width: 769px) {
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+    
+    body {
+        padding-bottom: 0 !important;
+    }
+}
+
 /* Footer */
 .footer {
     background: linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 31, 46, 0.95) 50%, rgba(45, 55, 72, 0.95) 100%);
