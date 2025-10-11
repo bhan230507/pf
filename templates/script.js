@@ -167,6 +167,12 @@ function showTab(tabName) {
         button.classList.remove('active');
     });
     
+    // 모바일 네비게이션 아이템 비활성화
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    mobileNavItems.forEach(item => {
+        item.classList.remove('active');
+    });
+    
     // 선택된 탭 컨텐츠 표시
     const selectedTab = document.getElementById(tabName + '-tab');
     if (selectedTab) {
@@ -177,6 +183,12 @@ function showTab(tabName) {
     const selectedButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
     if (selectedButton) {
         selectedButton.classList.add('active');
+    }
+    
+    // 모바일 네비게이션 아이템 활성화
+    const mobileNavItem = document.querySelector(`.mobile-nav-item[onclick="showTab('${tabName}')"]`);
+    if (mobileNavItem) {
+        mobileNavItem.classList.add('active');
     }
     
     // Portfolio 탭이 활성화될 때만 프로젝트 데이터 로드 및 렌더링
