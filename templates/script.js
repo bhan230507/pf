@@ -138,9 +138,6 @@ function createChallengeCard(challenge) {
     
     return `
         <div class="card rarity-${challenge.rarity}" onclick="openChallenge(${challenge.id})">
-            <div class="card-thumbnail">
-                <img src="${challenge.thumbnail}" alt="${challenge.title}" loading="lazy" class="clickable-image">
-            </div>
             <div class="card-content">
                 <h3 class="card-title">${challenge.title}</h3>
                 <div class="card-category">${challenge.category}</div>
@@ -299,6 +296,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 portfolioCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }, 300);
+    } else if (hash === '#challenge-tab') {
+        showTab('challenge');
+        // 챌린지 카드 위치로 스크롤
+        setTimeout(() => {
+            const challengeCards = document.getElementById('challenge-cards');
+            if (challengeCards) {
+                challengeCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    } else if (hash === '#cv-tab') {
+        showTab('cv');
     } else {
         // 기본 탭 설정 - 첫 번째 탭(PORTFOLIO) 활성화
         showTab('portfolio');
@@ -341,6 +349,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     portfolioCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 300);
+        } else if (newHash === '#challenge-tab') {
+            showTab('challenge');
+            setTimeout(() => {
+                const challengeCards = document.getElementById('challenge-cards');
+                if (challengeCards) {
+                    challengeCards.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+        } else if (newHash === '#cv-tab') {
+            showTab('cv');
         }
     });
 });

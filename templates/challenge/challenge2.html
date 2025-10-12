@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문제 해결 - 한기정 포트폴리오</title>
+    <title>DB가 없다? 공감이 필요해 - 한기정 포트폴리오</title>
     <link rel="stylesheet" href="../project-style.css">
 </head>
 <body>
@@ -13,29 +13,162 @@
         </a>
 
         <div class="project-header">
-            <h1 class="project-title">💡 문제 해결</h1>
-            <div class="project-category">Problem Solving</div>
+            <h1 class="project-title">DB가 없다? 공감이 필요해</h1>
+            <div class="project-category">Database Management & Team Collaboration</div>
             <p class="project-description">
-                데이터 기반의 체계적인 접근으로 복잡한 비즈니스 문제를 해결합니다.
+                구글시트와 엑셀 중심의 비효율적인 데이터 관리 환경을 MySQL부터 BigQuery까지 확장하여 
+                체계적인 데이터 레이크를 구축했습니다. 가장 중요한 것은 2년 만에 공감하는 동료들을 만들어냈다는 것입니다.
             </p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <div class="icon">🗄️</div>
+                    <span>데이터베이스</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">👥</div>
+                    <span>팀 협업</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">☁️</div>
+                    <span>클라우드</span>
+                </div>
+            </div>
         </div>
 
         <div class="project-content">
-            <div class="section">
-                <h2>데이터 분석</h2>
-                <p>대용량 데이터를 분석하여 숨겨진 패턴과 인사이트를 발견합니다.</p>
+            <div class="project-image">
+                <img src="../history/challengeImg/challenge2_whydb.png" alt="DB가 필요한 이유" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_whydb.png', 'DB가 필요한 이유')">
             </div>
 
-            <div class="section">
-                <h2>시스템적 사고</h2>
-                <p>전체적인 관점에서 문제를 바라보고 시스템 레벨에서의 해결책을 제시합니다.</p>
-            </div>
+            <div class="project-details">
+                <div class="section">
+                    <h2 class="section-title">문제 상황</h2>
+                    <ul class="features-list">
+                        <li>기존 데이터 분석 업무환경이 구글시트를 메인으로 하고 저장은 엑셀로 하는 고전적인 방식</li>
+                        <li>영수증 데이터를 비롯한 다양한 도메인의 데이터를 관리하기에는 비효율적이고 확장성 부족</li>
+                        <li>적어도 DB 스토리지 및 SQL로 관리가 시급했지만 <strong>공감할 수 있는 동료는 0명</strong></li>
+                        <li>데이터 관리의 심각성과 해결의 필요성을 공론화할 방법이 필요</li>
+                    </ul>
+                </div>
 
-            <div class="section">
-                <h2>자동화 솔루션</h2>
-                <p>반복적인 작업을 자동화하여 효율성을 극대화하고 오류를 최소화합니다.</p>
+                <div class="section">
+                    <h2 class="section-title">해결 과정</h2>
+                    <ul class="features-list">
+                        <li>데이터가 이렇게 처리될 수 있다는 것을 보여드리기 위해 개인 PC에서 MySQL 설치 및 운영</li>
+                        <li>DB 전문가가 아닌 상황에서 실무에 필요한 내용을 학습하여 적용</li>
+                        <li>각 도메인별로 데이터 모델링과 정규화 작업 수행</li>
+                        <li>다른 팀과 공유하려면 DB 포트 오픈, 보안, 교육 등의 문제가 시급함을 인식</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_mysql1.png" alt="MySQL 데이터베이스 구축" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_mysql1.png', 'MySQL 데이터베이스 구축')">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">팀 내 도입 전략</h2>
+                    <ul class="features-list">
+                        <li>일단 우리 팀원들과만 사용해보기로 결정</li>
+                        <li>개발팀, IT팀이 없는 상황에서 아이피를 논리적으로 고정</li>
+                        <li>SQL을 천천히 교육하고 차근차근 각자 필요한 데이터를 테이블로 만들어서 관리하게 함</li>
+                        <li>팀원들이 직접 테이블을 만들고 관리하는 과정을 통해 데이터베이스의 장점을 체감</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_gcp_training1.png" alt="팀원 SQL 교육 과정 1" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_gcp_training1.png', '팀원 SQL 교육 과정 1')">
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_gcp_traning2.png" alt="팀원 SQL 교육 과정 2" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_gcp_traning2.png', '팀원 SQL 교육 과정 2')">
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_gcp_traning3.png" alt="팀원 SQL 교육 과정 3" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_gcp_traning3.png', '팀원 SQL 교육 과정 3')">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">시스템 확장</h2>
+                    <ul class="features-list">
+                        <li>팀원들이 만든 테이블들을 전체적으로 표준화하여 스키마 정리</li>
+                        <li>테이블 간의 관계를 통해 ERD 구축</li>
+                        <li>구글 생태계를 가진 회사이므로 <strong>GCP를 활용해서 BigQuery까지 확장</strong></li>
+                        <li>구글시트에서 바로 불러올 수 있게 구축</li>
+                        <li><strong>하루에 수집되는 데이터가 100만개 이상</strong>, 이제는 거대한 데이터 레이크가 생김</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_gcp_overall_dgm.png" alt="GCP 전체 아키텍처 다이어그램" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_gcp_overall_dgm.png', 'GCP 전체 아키텍처 다이어그램')">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">ERD</span>
+                        <span class="tech-tag">Schema Design</span>
+                        <span class="tech-tag">Data Normalization</span>
+                        <span class="tech-tag">Team Training</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Data Lake</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">최종 성과 - 공감을 불러일으키다</h2>
+                    <ul class="features-list">
+                        <li><strong>가장 중요한 성과: 2년 만에 공감하는 동료들이 서서히 늘어남</strong></li>
+                        <li>구글시트와 엑셀 중심의 비효율적인 데이터 관리 환경을 MySQL 기반으로 전환</li>
+                        <li>팀원들이 직접 SQL을 사용하여 데이터를 관리할 수 있는 역량 확보</li>
+                        <li>각 도메인별 체계적인 데이터 모델링 및 정규화 완료</li>
+                        <li>전체 테이블 표준화 및 ERD 구축을 통한 데이터 관계 명확화</li>
+                        <li>GCP BigQuery를 활용한 확장 가능한 데이터 레이크 구축</li>
+                        <li>하루 100만개 이상의 대용량 데이터 처리 시스템 완성</li>
+                        <li>데이터 관리의 새로운 패러다임을 팀 내에 정착</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge2_dbsearch.png" alt="데이터베이스 검색 및 운영 결과" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge2_dbsearch.png', '데이터베이스 검색 및 운영 결과')">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <button class="close-button" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.classList.add('active');
+            
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
+        }
+
+        // 이미지 모달 닫기
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
 </body>
 </html>

@@ -2,42 +2,39 @@
   "challengeProjects": [
     {
       "id": 1,
-      "title": "도전 정신",
-      "description": "새로운 기술과 방법론을 학습하고 적용하여 더 나은 솔루션을 찾아갑니다.",
-      "detailDescription": "지속적인 학습과 실험을 통해 혁신적인 솔루션을 개발합니다. 최신 기술 트렌드를 파악하고 새로운 도구와 프레임워크를 적극적으로 학습하며, 기존 방식에 만족하지 않고 더 효율적이고 혁신적인 방법을 찾기 위해 끊임없이 실험합니다.",
-      "features": ["최신 기술 트렌드 파악", "실험적 접근", "체계적 문제 해결", "지속적 자기계발"],
-      "thumbnail": "templates/history/20250919_KY_ETL_flow.png",
+      "title": "뒤죽박죽 영수증 데이터",
+      "description": "F&B 회사의 복잡한 영수증 데이터 수집 및 표준화 문제를 해결한 자동화 솔루션입니다. 개발부서가 없는 환경에서 Python 기반 자동화 시스템을 구축하여 데이터 정확도를 98% 이상으로 향상시켰습니다.",
+      "detailDescription": "F&B 회사의 복잡한 영수증 데이터 수집 및 표준화 문제를 해결한 자동화 솔루션입니다. 개발부서가 없는 환경에서 Python 기반 자동화 시스템을 구축하여 데이터 정확도를 98% 이상으로 향상시켰습니다. 각 브랜드별 메뉴 판매량, 사이드 판매량, 메뉴와 사이드의 관계, 시계열 데이터의 부정확성 등의 문제를 해결했습니다.",
+      "features": ["API 연동을 통한 데이터 수집 자동화", "메뉴 구조 표준화 및 매핑", "청크 단위 데이터 처리", "오차범위 2% 내외의 정확한 판매량 분석", "500만원 커스텀 구축비용 절약", "개발부서 없이도 기술적 문제 해결"],
       "author": "한기정",
-      "category": "Innovation & Learning",
+      "category": "Data Automation & Process Innovation",
       "rarity": "legendary",
-      "techStack": ["Machine Learning", "Cloud Computing", "Data Engineering", "Automation", "Continuous Learning"],
-      "period": "2024"
+      "techStack": ["Python", "Requests", "Pandas", "HTTP API", "데이터 표준화", "자동화 스크립트", "청크 처리", "텍스트 매칭"],
+      "period": "2023.07 - 2023.12"
     },
     {
       "id": 2,
-      "title": "문제 해결",
-      "description": "데이터 기반의 체계적인 접근으로 복잡한 비즈니스 문제를 해결합니다.",
-      "detailDescription": "대용량 데이터 분석을 통해 숨겨진 패턴을 발견하고 비즈니스 인사이트를 도출합니다. 전체적인 관점에서 문제를 바라보고 시스템 레벨에서의 해결책을 제시하며, 반복적인 작업을 자동화하여 효율성을 극대화하고 오류를 최소화합니다.",
-      "features": ["데이터 기반 의사결정", "시스템적 사고", "자동화 솔루션", "효율성 극대화"],
-      "thumbnail": "templates/history/datacenter_대시보드.png",
+      "title": "DB가 없다? 공감이 필요해",
+      "description": "구글시트와 엑셀 중심의 비효율적인 데이터 관리 환경을 MySQL부터 BigQuery까지 확장하여 체계적인 데이터 레이크를 구축했습니다. 가장 중요한 것은 2년 만에 공감하는 동료들을 만들어냈다는 것입니다.",
+      "detailDescription": "기존 데이터 분석 업무환경이 구글시트를 메인으로 하고 저장은 엑셀로 하는 고전적인 방식이었습니다. 영수증 데이터를 비롯한 다양한 도메인의 데이터를 관리하기에는 비효율적이고 확장성이 부족했습니다. 적어도 DB 스토리지 및 SQL로 관리가 시급했지만, 이런 부분을 공감할 수 있는 동료는 0명이었습니다. 데이터가 이렇게 처리될 수 있다는 것을 보여드리기 위해 개인 PC에서 MySQL을 설치하고 운영해보기로 했습니다.",
+      "features": ["MySQL 데이터베이스 구축 및 운영", "각 도메인별 데이터 모델링 및 정규화", "팀원 대상 SQL 교육 및 테이블 관리", "전체 테이블 표준화 및 스키마 정리", "ERD 구축을 통한 테이블 관계 정의", "GCP BigQuery 확장으로 데이터 레이크 구축", "하루 100만개 이상 데이터 처리", "2년 만에 공감하는 동료들 확보"],
       "author": "한기정",
-      "category": "Problem Solving & Analytics",
+      "category": "Database Management & Team Collaboration",
       "rarity": "epic",
-      "techStack": ["Data Analysis", "Business Intelligence", "Process Automation", "System Design", "Statistical Analysis"],
-      "period": "2024"
+      "techStack": ["MySQL", "SQL", "Database Design", "Data Modeling", "ERD", "Schema Design", "Data Normalization", "Team Training", "GCP", "BigQuery", "Data Lake"],
+      "period": "2023.12 - 2025.12"
     },
     {
       "id": 3,
-      "title": "혁신적 사고",
-      "description": "기존의 틀에 얽매이지 않고 창의적이고 효율적인 방법을 모색합니다.",
-      "detailDescription": "전통적인 방법을 넘어서 새로운 관점에서 문제를 바라보고 혁신적인 해결책을 제시합니다. 최소한의 리소스로 최대한의 효과를 얻을 수 있는 방법을 찾으며, 현재의 요구사항뿐만 아니라 미래의 확장성과 유지보수성을 고려합니다.",
-      "features": ["창의적 접근", "효율성 추구", "미래 지향적 사고", "혁신적 솔루션"],
-      "thumbnail": "templates/history/상권분석_맵_1.png",
+      "title": "Airflow를 더 단순하게",
+      "description": "복잡한 Airflow를 팀원들이 쉽게 사용할 수 있도록 단순화하고 표준화했습니다. 개발 지식이 없는 직원들도 DAG를 만들고 관리할 수 있는 시스템을 구축했습니다.",
+      "detailDescription": "모든 데이터 수집 및 자동화를 혼자 할 수 없기에 팀원들에게 자동화 교육이 필요했습니다. 하지만 크론잡, 단순 스케줄링 등을 알려주기에는 체계가 부족하고 유지보수가 불가능했습니다. 팀원들은 데이터를 수집, 수정, 적재하는 간단한 ETL 설계 및 구축 능력은 있었기 때문에 이 흐름을 관리할 수 있는 툴이 필요했습니다. Airflow를 통해 해결책을 찾았지만, 개발을 전혀 모르는 직원들이 사용하기에는 너무 복잡했습니다.",
+      "features": ["GCP Compute Engine을 활용한 Airflow 구축", "CeleryExecutor를 통한 분산 병렬 처리", "Python 오퍼레이터만 사용하는 단순화 전략", "Key-Value 구조 기반 DAG 생성 시스템", "팀원 대상 Airflow 교육 및 운영 가이드", "Airflow 기본 UI를 통한 로그 확인 등 운영 기능 활용"],
       "author": "한기정",
-      "category": "Creative Thinking & Innovation",
+      "category": "Workflow Automation & Team Enablement",
       "rarity": "rare",
-      "techStack": ["Innovation Management", "Creative Problem Solving", "Future Planning", "Strategic Thinking", "Design Thinking"],
-      "period": "2024"
+      "techStack": ["Apache Airflow", "GCP Compute Engine", "CeleryExecutor", "Python", "Docker", "Linux", "ETL", "Workflow Management", "Team Training"],
+      "period": "2024.03 - 2024.08"
     }
   ]
 }

@@ -1896,6 +1896,25 @@ li:before {
         box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3) !important;
     }
     
+    /* 모바일 Challenge 카드 높이 조정 */
+    #challenge-cards .card {
+        height: 250px !important;
+    }
+    
+    #challenge-cards .card-content {
+        padding: 15px !important;
+    }
+    
+    #challenge-cards .card-title {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    #challenge-cards .card-description {
+        font-size: 0.85rem !important;
+        margin-bottom: 12px !important;
+    }
+    
     /* 모바일 하단 네비게이션 Challenge 버튼 강조 */
     .mobile-nav-item[onclick*="challenge"] {
         background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 102, 204, 0.1) 50%, rgba(0, 81, 163, 0.1) 100%) !important;
@@ -2439,6 +2458,39 @@ li:before {
 
 .clickable-image:hover {
     transform: scale(1.02);
+}
+
+/* Story Section 스타일 - 구두 형태 스토리텔링 */
+.story-section {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-section p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.story-section p:first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #60a5fa;
+}
+
+.story-section p:last-child {
+    font-weight: 600;
+    color: #f59e0b;
+    border-top: 1px solid rgba(245, 158, 11, 0.3);
+    padding-top: 20px;
+    margin-top: 30px;
 }
 
 /* 포트폴리오 요약 섹션 스타일 */
@@ -3168,6 +3220,34 @@ li:before {
 .quick-challenge-btn .btn-icon {
     font-size: 1.3rem;
     animation: rocketBounce 2s infinite;
+}
+
+/* Challenge 카드 전용 스타일 - 이미지 없이 더 컴팩트하게 */
+#challenge-cards .card {
+    height: 280px !important; /* 이미지 없이 높이 축소 */
+}
+
+#challenge-cards .card-content {
+    padding: 20px !important; /* 패딩 조정 */
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+#challenge-cards .card-title {
+    font-size: 1.1rem !important; /* 제목 크기 조정 */
+    margin-bottom: 12px !important;
+}
+
+#challenge-cards .card-description {
+    font-size: 0.9rem !important; /* 설명 크기 조정 */
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+}
+
+#challenge-cards .card-meta {
+    margin-top: auto !important; /* 메타 정보를 하단으로 */
 }
 
 @media (max-width: 768px) {

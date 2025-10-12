@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도전 정신 - 한기정 포트폴리오</title>
+    <title>뒤죽박죽 영수증 데이터 - 한기정 포트폴리오</title>
     <link rel="stylesheet" href="../project-style.css">
 </head>
 <body>
@@ -13,29 +13,146 @@
         </a>
 
         <div class="project-header">
-            <h1 class="project-title">🚀 도전 정신</h1>
-            <div class="project-category">Innovation</div>
+            <h1 class="project-title">뒤죽박죽 영수증 데이터</h1>
+            <div class="project-category">Data Automation & Process Innovation</div>
             <p class="project-description">
-                새로운 기술과 방법론을 학습하고 적용하여 더 나은 솔루션을 찾아갑니다.
+                F&B 회사의 복잡한 영수증 데이터 수집 및 표준화 문제를 해결한 자동화 솔루션입니다. 
+                개발부서가 없는 환경에서 Python 기반 자동화 시스템을 구축하여 
+                데이터 정확도를 98% 이상으로 향상시켰습니다.
             </p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <div class="icon">🤖</div>
+                    <span>자동화</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">📊</div>
+                    <span>데이터 표준화</span>
+                </div>
+                <div class="meta-item">
+                    <div class="icon">⚡</div>
+                    <span>API 연동</span>
+                </div>
+            </div>
         </div>
 
         <div class="project-content">
-            <div class="section">
-                <h2>지속적인 학습</h2>
-                <p>최신 기술 트렌드를 파악하고 새로운 도구와 프레임워크를 적극적으로 학습합니다.</p>
+            <div class="project-image">
+                <img src="../history/challengeImg/challenge1_receipt.png" alt="영수증 데이터 문제 상황" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge1_receipt.png', '영수증 데이터 문제 상황')">
             </div>
 
-            <div class="section">
-                <h2>실험적 접근</h2>
-                <p>기존 방식에 만족하지 않고 더 효율적이고 혁신적인 방법을 찾기 위해 끊임없이 실험합니다.</p>
-            </div>
+            <div class="project-details">
+                <div class="section">
+                    <h2 class="section-title">문제 상황</h2>
+                    <ul class="features-list">
+                    <li>F&B 회사임에도 각 브랜드별 메뉴 판매량, 사이드 판매량, 메뉴와 사이드의 관계, 시계열 데이터의 부정확성 문제 존재</li>
+                    <li>영수증 데이터 수집이 웹 엑셀 다운로드 형태로만 가능하여 한 달치 데이터 다운로드에도 긴 처리시간 소요</li>
+                    <li>더 긴 기간의 데이터 수집 시 런타임 에러 발생으로 대용량 데이터 처리 불가능</li>
+                    <li>개발부서 부재로 직접적인 기술적 해결책 필요</li>
+                    </ul>
+                </div>
 
-            <div class="section">
-                <h2>문제 해결 능력</h2>
-                <p>복잡한 문제를 단계별로 분석하고 체계적인 접근으로 해결책을 도출합니다.</p>
+                <div class="section">
+                    <h2 class="section-title">해결 과정</h2>
+                    <ul class="features-list">
+                    <li>타 솔루션 업체와 API 연동 방안 협의했으나 커스텀 구축비용 500만원 필요</li>
+                    <li>HTTP 통신 구조 분석으로 개별 엔드포인트와 파라미터 기반 데이터 수집 구조 파악</li>
+                    <li>데이터 사이즈 제한으로 인한 청크 단위 처리 방식 구현</li>
+                    <li>Python requests 라이브러리 활용한 자동화 솔루션 구축</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge1_autoGet.png" alt="자동화 데이터 수집 시스템" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge1_autoGet.png', '자동화 데이터 수집 시스템')">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">데이터 표준화 문제 해결</h2>
+                    <ul class="features-list">
+                    <li><strong>메뉴 구조 문제:</strong> 메인메뉴, 옵션메뉴, 사이드메뉴의 획일화된 구조 부재 → 모든 패턴의 경우의 수 정리하여 일관된 구조 구축</li>
+                    <li><strong>메뉴 식별 문제:</strong> 메뉴 이름의 시퀀스 부재, 메뉴 코드 없음 → 텍스트 포함 및 유사 텍스트 기반 메뉴코드 생성 및 매핑</li>
+                    <li><strong>메뉴 뎁스 문제:</strong> 메뉴들의 뎁스 구조 일관성 부족 → Pandas 활용한 뎁스 분리 및 상단 row 생성</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge1_depth_mapping.png" alt="메뉴 뎁스 매핑 및 표준화" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge1_depth_mapping.png', '메뉴 뎁스 매핑 및 표준화')">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Requests</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">HTTP API</span>
+                        <span class="tech-tag">데이터 표준화</span>
+                        <span class="tech-tag">자동화 스크립트</span>
+                        <span class="tech-tag">청크 처리</span>
+                        <span class="tech-tag">텍스트 매칭</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">핵심 원칙</h2>
+                    <ul class="features-list">
+                    <li>운영팀의 업무 프로세스를 방해하지 않는 범위에서 문제 해결</li>
+                    <li>현재 업무 프로세스를 완전히 뒤집어서 흐름을 방해하지 않고 기존 방식과 느낌 유지</li>
+                    <li>데이터 전문가가 아닌 판매 성장 전문가들의 업무 연속성 보장</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">성과 및 결과</h2>
+                    <ul class="features-list">
+                        <li>각 브랜드별 메뉴 판매량, 메인메뉴와 사이드메뉴의 관련성 데이터를 <strong>오차범위 2% 내외</strong>로 정확히 분석 가능</li>
+                        <li>메뉴별 시계열 데이터와 트렌드를 한눈에 파악할 수 있는 시스템 구축</li>
+                        <li>3개 브랜드의 영수증 데이터 표준화 문제 완전 해결</li>
+                        <li>개발부서 없이도 기술적 문제 해결 가능한 자동화 시스템 구축</li>
+                        <li>500만원의 커스텀 구축비용 절약 및 내부 솔루션으로 완전 자립</li>
+                    </ul>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge1_result1.png" alt="데이터 분석 결과 1" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge1_result1.png', '데이터 분석 결과 1')">
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="../history/challengeImg/challenge1_result2.png" alt="데이터 분석 결과 2" class="clickable-image" onclick="openImageModal('../history/challengeImg/challenge1_result2.png', '데이터 분석 결과 2')">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <button class="close-button" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.classList.add('active');
+            
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
+        }
+
+        // 이미지 모달 닫기
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
 </body>
 </html>

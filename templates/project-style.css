@@ -266,7 +266,31 @@ body {
     }
     
     .project-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem; /* 제목 크기 축소 */
+    }
+    
+    .project-category {
+        font-size: 0.8rem; /* 카테고리 크기 축소 */
+        padding: 6px 16px;
+    }
+    
+    .project-description {
+        font-size: 1rem; /* 설명 크기 축소 */
+        line-height: 1.5;
+    }
+    
+    .section-title {
+        font-size: 1.1rem; /* 섹션 제목 크기 축소 */
+    }
+    
+    .features-list li {
+        font-size: 0.9rem; /* 리스트 항목 크기 축소 */
+        margin-bottom: 6px;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem; /* 기술 태그 크기 축소 */
+        padding: 5px 10px;
     }
     
     .project-image {
@@ -283,7 +307,7 @@ body {
     }
     
     .section {
-        padding: 20px;
+        padding: 18px; /* 섹션 패딩 축소 */
         border-radius: 12px;
     }
     
@@ -293,6 +317,40 @@ body {
     
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1.5rem; /* 소형 모바일에서 더 작게 */
+    }
+    
+    .project-category {
+        font-size: 0.75rem;
+        padding: 5px 14px;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .features-list li {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    .section {
+        padding: 15px; /* 소형 모바일에서 패딩 더 축소 */
     }
 }
 
