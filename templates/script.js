@@ -209,6 +209,25 @@ function closeImageModal() {
     modal.classList.remove('active');
 }
 
+// QR 모달 열기
+function openQRModal() {
+    const modal = document.getElementById('qrModal');
+    modal.style.display = 'block';
+    
+    // ESC 키로 닫기
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeQRModal();
+        }
+    });
+}
+
+// QR 모달 닫기
+function closeQRModal() {
+    const modal = document.getElementById('qrModal');
+    modal.style.display = 'none';
+}
+
 // 스킬 상세 내용 토글 (모바일용)
 function toggleSkillDetail(element) {
     // 모바일에서만 작동

@@ -36,7 +36,148 @@ body {
 
 .nav-title {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-qr {
+    flex-shrink: 0;
+}
+
+.nav-text {
+    display: flex;
     flex-direction: column;
+}
+
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-code {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+/* 모바일 QR 코드 스타일 */
+.mobile-qr-code {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.mobile-qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    min-width: 60px;
+}
+
+.mobile-qr-item:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.mobile-qr-item .nav-icon {
+    font-size: 20px !important;
+    line-height: 1 !important;
+}
+
+.mobile-qr-item span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+/* QR 모달 스타일 */
+.qr-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.qr-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    width: 350px;
+    position: relative;
+}
+
+.qr-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.qr-modal-close:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.qr-modal-content h3 {
+    color: #f59e0b;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.qr-modal-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 3px solid rgba(245, 158, 11, 0.3);
+}
+
+.qr-modal-content p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .nav-name {
@@ -1696,6 +1837,11 @@ li:before {
     .nav-spacer {
         height: 70px !important;
     }
+    
+    /* 모바일에서 상단 QR 코드 숨김 */
+    .nav-qr {
+        display: none !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1706,9 +1852,8 @@ li:before {
     }
     
     .nav-title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start !important;
+        display: block !important;
+        text-align: left !important;
     }
     
     .nav-name {

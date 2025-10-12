@@ -18,8 +18,13 @@
     <nav class="fixed-navbar">
         <div class="nav-container">
             <div class="nav-title">
-                <h1 class="nav-name">한기정 (HAN GI JUNG)</h1>
-                <div class="nav-subtitle">Data Engineering & Analytics & AI Portfolio</div>
+                <div class="nav-qr">
+                    <img src="templates/history/url_qr.png" alt="포트폴리오 QR 코드" class="qr-code" onclick="openQRModal()">
+                </div>
+                <div class="nav-text">
+                    <h1 class="nav-name">한기정 (HAN GI JUNG)</h1>
+                    <div class="nav-subtitle">Data Engineering & Analytics & AI Portfolio</div>
+                </div>
             </div>
             <div class="nav-tabs">
                 <button class="nav-tab-button" onclick="showTab('portfolio')">PORTFOLIO</button>
@@ -638,12 +643,28 @@
             <div class="nav-icon">📞</div>
             <span>Phone</span>
         </div>
+        <div class="mobile-nav-item mobile-qr-item" onclick="openQRModal()">
+            <div class="nav-icon">
+                <img src="templates/history/url_qr.png" alt="QR 코드" class="mobile-qr-code">
+            </div>
+            <span>QR</span>
+        </div>
     </nav>
 
     <!-- 이미지 모달 -->
     <div class="image-modal" id="imageModal">
         <button class="close-button" onclick="closeImageModal()">&times;</button>
         <img id="modalImage" src="" alt="확대된 이미지">
+    </div>
+
+    <!-- QR 모달 -->
+    <div class="qr-modal" id="qrModal">
+        <div class="qr-modal-content">
+            <button class="qr-modal-close" onclick="closeQRModal()">&times;</button>
+            <h3>포트폴리오 QR 코드</h3>
+            <img src="templates/history/url_qr.png" alt="포트폴리오 QR 코드" class="qr-modal-image">
+            <p>스캔하여 포트폴리오에 접속하세요.</p>
+        </div>
     </div>
 
     <script src="templates/script.js"></script>
