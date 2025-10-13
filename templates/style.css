@@ -65,7 +65,7 @@ body {
 
 .qr-code:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 20px rgba(26, 115, 232, 0.4);
 }
 
 /* 모바일 QR 코드 스타일 */
@@ -125,7 +125,7 @@ body {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(26, 115, 232, 0.2);
     width: 350px;
     position: relative;
 }
@@ -159,7 +159,7 @@ body {
 }
 
 .qr-modal-content h3 {
-    color: #f59e0b;
+    color: #1A73E8;
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 600;
@@ -170,7 +170,7 @@ body {
     height: 200px;
     border-radius: 10px;
     margin-bottom: 20px;
-    border: 3px solid rgba(245, 158, 11, 0.3);
+    border: 3px solid rgba(26, 115, 232, 0.3);
 }
 
 .qr-modal-content p {
@@ -178,6 +178,17 @@ body {
     font-size: 1rem;
     margin: 0;
     line-height: 1.5;
+}
+
+.nav-name a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-name a:hover {
+    color: #1A73E8;
+    text-shadow: 0 0 15px rgba(26, 115, 232, 0.5);
 }
 
 .nav-name {
@@ -257,7 +268,7 @@ li:before {
 /* 비활성 버튼 - 더 강력한 선택자 */
 .fixed-navbar .nav-tabs .nav-tab-button:not(.active) {
     background: transparent !important;
-    border: 2px solid rgba(0, 123, 255, 0.1) !important;
+    border: 2px solid rgba(0, 123, 255, 0.3) !important;
     color: #94a3b8 !important;
     padding: 8px 20px;
     border-radius: 8px;
@@ -269,18 +280,34 @@ li:before {
 }
 
 .fixed-navbar .nav-tabs .nav-tab-button:not(.active):hover {
-    border-color: rgba(0, 123, 255, 0.3) !important;
+    border: 2px solid rgba(0, 123, 255, 0.5) !important;
     color: #cbd5e1 !important;
-    background: transparent !important;
+    background: rgba(0, 123, 255, 0.05) !important;
     transform: none;
 }
 
 /* 활성 버튼 - Portfolio, CV만 연하게 */
 .fixed-navbar .nav-tabs .nav-tab-button.active:not(.challenge-nav-btn) {
-    background: rgba(0, 123, 255, 0.1) !important;
-    border-color: rgba(0, 123, 255, 0.3) !important;
+    background: rgba(0, 123, 255, 0.15) !important;
+    border: 2px solid rgba(0, 123, 255, 0.6) !important;
     color: #007bff !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3) !important;
+    transform: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* 활성 버튼 강제 적용 */
+.nav-tab-button.active {
+    background: rgba(0, 123, 255, 0.15) !important;
+    border: 2px solid rgba(0, 123, 255, 0.6) !important;
+    color: #007bff !important;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3) !important;
     transform: none;
     padding: 8px 20px;
     border-radius: 8px;
@@ -1815,14 +1842,14 @@ li:before {
         font-size: 0.7rem !important;
         border-radius: 4px !important;
         background: transparent !important;
-        border: 1px solid rgba(0, 123, 255, 0.1) !important;
+        border: 1px solid rgba(0, 123, 255, 0.3) !important;
         color: #94a3b8 !important;
     }
     
     .fixed-navbar .nav-tabs .nav-tab-button:not(.active):hover {
-        border-color: rgba(0, 123, 255, 0.2) !important;
+        border: 1px solid rgba(0, 123, 255, 0.5) !important;
         color: #cbd5e1 !important;
-        background: transparent !important;
+        background: rgba(0, 123, 255, 0.05) !important;
     }
     
     .fixed-navbar .nav-tabs .nav-tab-button.active {
@@ -2272,22 +2299,27 @@ li:before {
 
 /* Challenge Navigation Button */
 .challenge-nav-btn {
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.3) 0%, rgba(0, 102, 204, 0.3) 50%, rgba(0, 81, 163, 0.3) 100%) !important;
+    background: transparent !important;
     border: 2px solid rgba(0, 123, 255, 0.3) !important;
-    color: white !important;
-    font-weight: 700 !important;
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1) !important;
+    gap: 6px !important;
+    padding: 8px 20px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
     transition: all 0.3s ease !important;
-    margin-left: 10px !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.05em !important;
+    margin-left: 0 !important;
 }
 
 .challenge-nav-btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2) !important;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.5) 0%, rgba(0, 81, 163, 0.5) 50%, rgba(0, 60, 122, 0.5) 100%) !important;
+    border: 2px solid rgba(0, 123, 255, 0.5) !important;
+    color: #cbd5e1 !important;
+    background: rgba(0, 123, 255, 0.05) !important;
+    transform: none !important;
 }
 
 .challenge-nav-btn:active {
@@ -2297,8 +2329,11 @@ li:before {
 }
 
 .challenge-nav-btn.active {
-    background: linear-gradient(135deg, #007bff 0%, #0066cc 50%, #0051a3 100%) !important;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4) !important;
+    background: rgba(0, 123, 255, 0.15) !important;
+    border: 2px solid rgba(0, 123, 255, 0.6) !important;
+    color: #007bff !important;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3) !important;
+    transform: none !important;
 }
 
 .challenge-nav-btn .btn-text {
@@ -2371,7 +2406,7 @@ li:before {
 }
 
 .footer-content h4 {
-    color: #f59e0b;
+    color: #1A73E8;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
@@ -2402,7 +2437,7 @@ li:before {
 }
 
 .contact-item a:hover {
-    color: #f59e0b;
+    color: #1A73E8;
 }
 
 .copyright {
@@ -2746,20 +2781,20 @@ li:before {
 .tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
 }
 
 .tech-list li {
     color: #60a5fa;
-    padding: 6px 12px;
+    padding: 4px 8px;
     background: rgba(59, 130, 246, 0.1);
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid rgba(59, 130, 246, 0.3);
     transition: all 0.3s ease;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     list-style: none;
-    padding-left: 12px;
+    padding-left: 8px;
 }
 
 .tech-list li:before {
@@ -2957,12 +2992,12 @@ li:before {
     }
     
     .tech-list {
-        gap: 6px;
+        gap: 3px;
     }
     
     .tech-list li {
-        padding: 5px 10px;
-        font-size: 0.75rem;
+        padding: 3px 6px;
+        font-size: 0.7rem;
     }
     
     .stats-list li, .skills-list li {

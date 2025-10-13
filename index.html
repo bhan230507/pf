@@ -22,17 +22,17 @@
                     <img src="templates/history/url_qr.png" alt="포트폴리오 QR 코드" class="qr-code" onclick="openQRModal()">
                 </div>
                 <div class="nav-text">
-                    <h1 class="nav-name">한기정 (HAN GI JUNG)</h1>
+                    <h1 class="nav-name"><a href="#portfolio-tab" onclick="showTab('portfolio')">한기정 (HAN GI JUNG)</a></h1>
                     <div class="nav-subtitle">Data Engineering & Analytics & AI Portfolio</div>
                 </div>
             </div>
             <div class="nav-tabs">
-                <button class="nav-tab-button" onclick="showTab('portfolio')">PORTFOLIO</button>
-                <button class="nav-tab-button" onclick="showTab('cv')">CV</button>
-                <button class="nav-tab-button challenge-nav-btn" onclick="showTab('challenge')">
-                    <span class="btn-text">CHALLENGE STORIES</span>
-                    <span class="btn-icon">🚀</span>
-                </button>
+                <button class="nav-tab-button active" id="portfolio-btn">PORTFOLIO</button>
+                <button class="nav-tab-button" id="cv-btn">CV</button>
+            <button class="nav-tab-button challenge-nav-btn" id="challenge-btn">
+                <span class="btn-text">CHALLENGE</span>
+                <span class="btn-icon">🚀</span>
+            </button>
             </div>
         </div>
     </nav>
@@ -52,72 +52,6 @@
                 
                 <div class="summary-content">
                     <div class="summary-section">
-                        <h3 class="section-title">전문 분야</h3>
-                        <ul class="expertise-list">
-                            <li>빅데이터 파이프라인 구축</li>
-                            <li>데이터 엔지니어링</li>
-                            <li>ETL 자동화 시스템</li>
-                            <li>실시간 데이터 처리</li>
-                            <li>데이터 시각화</li>
-                            <li>클라우드 시스템 운영</li>
-                            <li>GIS 지리정보 시스템</li>
-                            <li>머신러닝 예측 모델</li>
-                        </ul>
-                    </div>
-
-                    <div class="summary-section">
-                        <h3 class="section-title">기술 스택</h3>
-                        <div class="tech-lists">
-                            <div class="tech-group">
-                                <h4>프로그래밍 & 프레임워크</h4>
-                                <ul class="tech-list">
-                                    <li>Python</li>
-                                    <li>SQL</li>
-                                    <li>Django</li>
-                                    <li>JavaScript</li>
-                                    <li>Apache Airflow</li>
-                                    <li>Prophet</li>
-                                </ul>
-                            </div>
-                            <div class="tech-group">
-                                <h4>빅데이터 & 클라우드</h4>
-                                <ul class="tech-list">
-                                    <li>GCP</li>
-                                    <li>BigQuery</li>
-                                    <li>Elasticsearch</li>
-                                    <li>Kafka</li>
-                                    <li>Logstash</li>
-                                    <li>Kibana</li>
-                                    <li>Jenkins CI/CD</li>
-                                </ul>
-                            </div>
-                            <div class="tech-group">
-                                <h4>데이터베이스 & 스토리지</h4>
-                                <ul class="tech-list">
-                                    <li>MySQL</li>
-                                    <li>PostgreSQL</li>
-                                    <li>Redis</li>
-                                    <li>Pandas/Numpy</li>
-                                    <li>Git</li>
-                                    <li>Linux</li>
-                                </ul>
-                            </div>
-                            <div class="tech-group">
-                                <h4>시각화 & 분석</h4>
-                                <ul class="tech-list">
-                                    <li>Folium</li>
-                                    <li>Bootstrap</li>
-                                    <li>Chart.js</li>
-                                    <li>Jupyter</li>
-                                    <li>Tableau</li>
-                                    <li>Selenium</li>
-                                    <li>BeautifulSoup</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="summary-section">
                         <h3 class="section-title">핵심 역량</h3>
                         <ul class="skills-list">
                             <li onclick="toggleSkillDetail(this)">
@@ -135,7 +69,7 @@
                             <li onclick="toggleSkillDetail(this)">
                                 <div class="skill-content">
                                     <strong>ETL 자동화 시스템 운영</strong>
-                                    <span class="skill-detail">Apache Airflow 기반 데이터 수집, 정제, 저장 자동화 및 대용량 데이터 처리 성능 40% 향상</span>
+                                    <span class="skill-detail">Apache Airflow 기반 데이터 수집, 정제, 저장 자동화 및 대용량 데이터 처리 성능 향상</span>
                                 </div>
                             </li>
                             <li onclick="toggleSkillDetail(this)">
@@ -153,10 +87,63 @@
                             <li onclick="toggleSkillDetail(this)">
                                 <div class="skill-content">
                                     <strong>머신러닝 예측 모델 개발</strong>
-                                    <span class="skill-detail">Prophet을 활용한 시계열 예측 및 메뉴 판매량 추정 알고리즘 구현 (오차율 ±2%)</span>
+                                    <span class="skill-detail">시계열 예측 및 메뉴 판매량 추정 알고리즘 구현 (오차율 ±2%)</span>
                                 </div>
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3 class="section-title">기술 스택</h3>
+                        <div class="tech-lists">
+                            <div class="tech-group">
+                                <h4>프로그래밍 언어</h4>
+                                <ul class="tech-list">
+                                    <li>Python</li>
+                                    <li>SQL</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="tech-group">
+                                <h4>프레임워크 & 라이브러리</h4>
+                                <ul class="tech-list">
+                                    <li>Django</li>
+                                    <li>FastAPI</li>
+                                </ul>
+                            </div>
+                            <div class="tech-group">
+                                <h4>자동화</h4>
+                                <ul class="tech-list">
+                                    <li>Airflow</li>
+                                    <li>Jenkins CI/CD</li>
+                                </ul>
+                            </div>
+                            <div class="tech-group">
+                                <h4>클라우드 & AI</h4>
+                                <ul class="tech-list">
+                                    <li>GCP</li>
+                                    <li>Prophet</li>
+                                    <li>ADK</li>
+                                </ul>
+                            </div>
+                            <div class="tech-group">
+                                <h4>데이터베이스 & 빅데이터</h4>
+                                <ul class="tech-list">
+                                    <li>BigQuery</li>
+                                    <li>MySQL</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </div>
+                            <div class="tech-group">
+                                <h4>시각화 & 웹</h4>
+                                <ul class="tech-list">
+                                    <li>Tableau</li>
+                                    <li>PowerBI</li>
+                                    <li>Chart.js</li>
+                                    <li>D3.js</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -594,7 +581,7 @@
             <!-- Challenge 요약 섹션 -->
             <div class="portfolio-summary">
                 <div class="summary-header">
-                    <h2 class="summary-title">🚀 CHALLENGE. THINK. SOLVE.</h2>
+                    <h2 class="summary-title">🚀 CHALLENGE PROJECTS</h2>
                     <p class="summary-subtitle">Simplifying complexity, making the impossible achievable.</p>
                 </div>
                 

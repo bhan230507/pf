@@ -280,9 +280,12 @@ function showTab(tabName) {
     }
     
     // 선택된 탭 버튼 활성화
-    const selectedButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
+    const selectedButton = document.getElementById(tabName + '-btn');
     if (selectedButton) {
         selectedButton.classList.add('active');
+        console.log(`Activated button for tab: ${tabName}`); // 디버깅용
+    } else {
+        console.log(`Button not found for tab: ${tabName}`); // 디버깅용
     }
     
     // 모바일 네비게이션 아이템 활성화
@@ -304,6 +307,29 @@ function showTab(tabName) {
 
 // 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', function() {
+    // 탭 버튼 이벤트 리스너 직접 추가
+    const portfolioBtn = document.getElementById('portfolio-btn');
+    const cvBtn = document.getElementById('cv-btn');
+    const challengeBtn = document.getElementById('challenge-btn');
+    
+    if (portfolioBtn) {
+        portfolioBtn.addEventListener('click', function() {
+            showTab('portfolio');
+        });
+    }
+    
+    if (cvBtn) {
+        cvBtn.addEventListener('click', function() {
+            showTab('cv');
+        });
+    }
+    
+    if (challengeBtn) {
+        challengeBtn.addEventListener('click', function() {
+            showTab('challenge');
+        });
+    }
+    
     // URL 해시 확인하여 탭 설정
     const hash = window.location.hash;
     if (hash === '#portfolio-tab' || hash === '#portfolio-cards') {
